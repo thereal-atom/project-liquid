@@ -1,0 +1,3382 @@
+[
+    {
+        "marketCode": "OX-USD-SWAP-LIN",
+        "name": "OX",
+        "referencePair": "OX/USDT",
+        "base": "OX",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BTC-USD-SWAP-LIN",
+        "name": "BTC",
+        "referencePair": "BTC/USDT",
+        "base": "BTC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "1",
+        "minSize": "0.0001"
+    },
+    {
+        "marketCode": "ETH-USD-SWAP-LIN",
+        "name": "ETH",
+        "referencePair": "ETH/USDT",
+        "base": "ETH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.1",
+        "minSize": "0.001"
+    },
+    {
+        "marketCode": "BNB-USD-SWAP-LIN",
+        "name": "BNB",
+        "referencePair": "BNB/USDT",
+        "base": "BNB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "SOL-USD-SWAP-LIN",
+        "name": "SOL",
+        "referencePair": "SOL/USDT",
+        "base": "SOL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "XRP-USD-SWAP-LIN",
+        "name": "XRP",
+        "referencePair": "XRP/USDT",
+        "base": "XRP",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ADA-USD-SWAP-LIN",
+        "name": "ADA",
+        "referencePair": "ADA/USDT",
+        "base": "ADA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "AVAX-USD-SWAP-LIN",
+        "name": "AVAX",
+        "referencePair": "AVAX/USDT",
+        "base": "AVAX",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "LTC-USD-SWAP-LIN",
+        "name": "LTC",
+        "referencePair": "LTC/USDT",
+        "base": "LTC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "OP-USD-SWAP-LIN",
+        "name": "OP",
+        "referencePair": "OP/USDT",
+        "base": "OP",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ARB-USD-SWAP-LIN",
+        "name": "ARB",
+        "referencePair": "ARB/USDT",
+        "base": "ARB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TIA-USD-SWAP-LIN",
+        "name": "TIA",
+        "referencePair": "TIA/USDT",
+        "base": "TIA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "SEI-USD-SWAP-LIN",
+        "name": "SEI",
+        "referencePair": "SEI/USDT",
+        "base": "SEI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "FIL-USD-SWAP-LIN",
+        "name": "FIL",
+        "referencePair": "FIL/USDT",
+        "base": "FIL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "LINK-USD-SWAP-LIN",
+        "name": "LINK",
+        "referencePair": "LINK/USDT",
+        "base": "LINK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "ORDI-USD-SWAP-LIN",
+        "name": "ORDI",
+        "referencePair": "ORDI/USDT",
+        "base": "ORDI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "SUI-USD-SWAP-LIN",
+        "name": "SUI",
+        "referencePair": "SUI/USDT",
+        "base": "SUI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PYTH-USD-SWAP-LIN",
+        "name": "PYTH",
+        "referencePair": "PYTH/USDT",
+        "base": "PYTH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "INJ-USD-SWAP-LIN",
+        "name": "INJ",
+        "referencePair": "INJ/USDT",
+        "base": "INJ",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "JUP-USD-SWAP-LIN",
+        "name": "JUP",
+        "referencePair": "JUP/USDT",
+        "base": "JUP",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "JTO-USD-SWAP-LIN",
+        "name": "JTO",
+        "referencePair": "JTO/USDT",
+        "base": "JTO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MANTA-USD-SWAP-LIN",
+        "name": "MANTA",
+        "referencePair": "MANTA/USDT",
+        "base": "MANTA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ALT-USD-SWAP-LIN",
+        "name": "ALT",
+        "referencePair": "ALT/USDT",
+        "base": "ALT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "API3-USD-SWAP-LIN",
+        "name": "API3",
+        "referencePair": "API3/USDT",
+        "base": "API3",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "RLB-USD-SWAP-LIN",
+        "name": "RLB",
+        "referencePair": "RLB/USDT",
+        "base": "RLB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "XAI-USD-SWAP-LIN",
+        "name": "XAI",
+        "referencePair": "XAI/USDT",
+        "base": "XAI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BLUR-USD-SWAP-LIN",
+        "name": "BLUR",
+        "referencePair": "BLUR/USDT",
+        "base": "BLUR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BIGTIME-USD-SWAP-LIN",
+        "name": "BIGTIME",
+        "referencePair": "BIGTIME/USDT",
+        "base": "BIGTIME",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DOGE-USD-SWAP-LIN",
+        "name": "DOGE",
+        "referencePair": "DOGE/USDT",
+        "base": "DOGE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ZETA-USD-SWAP-LIN",
+        "name": "ZETA",
+        "referencePair": "ZETA/USDT",
+        "base": "ZETA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TAO-USD-SWAP-LIN",
+        "name": "TAO",
+        "referencePair": "TAO/USDT",
+        "base": "TAO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "WLD-USD-SWAP-LIN",
+        "name": "WLD",
+        "referencePair": "WLD/USDT",
+        "base": "WLD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PENDLE-USD-SWAP-LIN",
+        "name": "PENDLE",
+        "referencePair": "PENDLE/USDT",
+        "base": "PENDLE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DOT-USD-SWAP-LIN",
+        "name": "DOT",
+        "referencePair": "DOT/USDT",
+        "base": "DOT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "MKR-USD-SWAP-LIN",
+        "name": "MKR",
+        "referencePair": "MKR/USDT",
+        "base": "MKR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.1",
+        "minSize": "0.001"
+    },
+    {
+        "marketCode": "LDO-USD-SWAP-LIN",
+        "name": "LDO",
+        "referencePair": "LDO/USDT",
+        "base": "LDO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DYM-USD-SWAP-LIN",
+        "name": "DYM",
+        "referencePair": "DYM/USDT",
+        "base": "DYM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "LUNA-USD-SWAP-LIN",
+        "name": "LUNA",
+        "referencePair": "LUNA/USDT",
+        "base": "LUNA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000LUNC-USD-SWAP-LIN",
+        "name": "1000LUNC",
+        "referencePair": "1000LUNC/USDT",
+        "base": "1000LUNC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ID-USD-SWAP-LIN",
+        "name": "ID",
+        "referencePair": "ID/USDT",
+        "base": "ID",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "XMR-USD-SWAP-LIN",
+        "name": "XMR",
+        "referencePair": "XMR/USDT",
+        "base": "XMR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "APT-USD-SWAP-LIN",
+        "name": "APT",
+        "referencePair": "APT/USDT",
+        "base": "APT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "ATOM-USD-SWAP-LIN",
+        "name": "ATOM",
+        "referencePair": "ATOM/USDT",
+        "base": "ATOM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "FTM-USD-SWAP-LIN",
+        "name": "FTM",
+        "referencePair": "FTM/USDT",
+        "base": "FTM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "STRK-USD-SWAP-LIN",
+        "name": "STRK",
+        "referencePair": "STRK/USDT",
+        "base": "STRK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PIXEL-USD-SWAP-LIN",
+        "name": "PIXEL",
+        "referencePair": "PIXEL/USDT",
+        "base": "PIXEL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ACE-USD-SWAP-LIN",
+        "name": "ACE",
+        "referencePair": "ACE/USDT",
+        "base": "ACE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "RON-USD-SWAP-LIN",
+        "name": "RON",
+        "referencePair": "RON/USDT",
+        "base": "RON",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TRUMP-USD-SWAP-LIN",
+        "name": "TRUMP",
+        "referencePair": "TRUMP/USDT",
+        "base": "TRUMP",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000MOG-USD-SWAP-LIN",
+        "name": "1000MOG",
+        "referencePair": "1000MOG/USDT",
+        "base": "1000MOG",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000PEPE-USD-SWAP-LIN",
+        "name": "1000PEPE",
+        "referencePair": "1000PEPE/USDT",
+        "base": "1000PEPE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BITCOIN-USD-SWAP-LIN",
+        "name": "BITCOIN",
+        "referencePair": "BITCOIN/USDT",
+        "base": "BITCOIN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "WIF-USD-SWAP-LIN",
+        "name": "WIF",
+        "referencePair": "WIF/USDT",
+        "base": "WIF",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "RUNE-USD-SWAP-LIN",
+        "name": "RUNE",
+        "referencePair": "RUNE/USDT",
+        "base": "RUNE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "KUJI-USD-SWAP-LIN",
+        "name": "KUJI",
+        "referencePair": "KUJI/USDT",
+        "base": "KUJI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "UNI-USD-SWAP-LIN",
+        "name": "UNI",
+        "referencePair": "UNI/USDT",
+        "base": "UNI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "AAVE-USD-SWAP-LIN",
+        "name": "AAVE",
+        "referencePair": "AAVE/USDT",
+        "base": "AAVE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "ONDO-USD-SWAP-LIN",
+        "name": "ONDO",
+        "referencePair": "ONDO/USDT",
+        "base": "ONDO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TON-USD-SWAP-LIN",
+        "name": "TON",
+        "referencePair": "TON/USDT",
+        "base": "TON",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "BCH-USD-SWAP-LIN",
+        "name": "BCH",
+        "referencePair": "BCH/USDT",
+        "base": "BCH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.001"
+    },
+    {
+        "marketCode": "ENA-USD-SWAP-LIN",
+        "name": "ENA",
+        "referencePair": "ENA/USDT",
+        "base": "ENA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "RETARDIO-USD-SWAP-LIN",
+        "name": "RETARDIO",
+        "referencePair": "RETARDIO/USDT",
+        "base": "RETARDIO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "NEAR-USD-SWAP-LIN",
+        "name": "NEAR",
+        "referencePair": "NEAR/USDT",
+        "base": "NEAR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "BOME-USD-SWAP-LIN",
+        "name": "BOME",
+        "referencePair": "BOME/USDT",
+        "base": "BOME",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "MILADY-USD-SWAP-LIN",
+        "name": "MILADY",
+        "referencePair": "MILADY/USDT",
+        "base": "MILADY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "1",
+        "minSize": "0.0001"
+    },
+    {
+        "marketCode": "LMEOW-USD-SWAP-LIN",
+        "name": "LMEOW",
+        "referencePair": "LMEOW/USDT",
+        "base": "LMEOW",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "PUNK-USD-SWAP-LIN",
+        "name": "PUNK",
+        "referencePair": "PUNK/USDT",
+        "base": "PUNK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "1",
+        "minSize": "0.00001"
+    },
+    {
+        "marketCode": "NOCHILL-USD-SWAP-LIN",
+        "name": "NOCHILL",
+        "referencePair": "NOCHILL/USDT",
+        "base": "NOCHILL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "WOJAK-USD-SWAP-LIN",
+        "name": "WOJAK",
+        "referencePair": "WOJAK/USDT",
+        "base": "WOJAK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "SPX-USD-SWAP-LIN",
+        "name": "SPX",
+        "referencePair": "SPX/USDT",
+        "base": "SPX",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "DOGINME-USD-SWAP-LIN",
+        "name": "1000doginme",
+        "referencePair": "DOGINME/USDT",
+        "base": "DOGINME",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BRETT-USD-SWAP-LIN",
+        "name": "BRETT",
+        "referencePair": "BRETT/USDT",
+        "base": "BRETT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DEGEN-USD-SWAP-LIN",
+        "name": "DEGEN",
+        "referencePair": "DEGEN/USDT",
+        "base": "DEGEN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MEW-USD-SWAP-LIN",
+        "name": "MEW",
+        "referencePair": "MEW/USDT",
+        "base": "MEW",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BODEN-USD-SWAP-LIN",
+        "name": "BODEN",
+        "referencePair": "BODEN/USDT",
+        "base": "BODEN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "POPCAT-USD-SWAP-LIN",
+        "name": "POPCAT",
+        "referencePair": "POPCAT/USDT",
+        "base": "POPCAT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MEME-USD-SWAP-LIN",
+        "name": "MEME",
+        "referencePair": "MEME/USDT",
+        "base": "MEME",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "IMX-USD-SWAP-LIN",
+        "name": "IMX",
+        "referencePair": "IMX/USDT",
+        "base": "IMX",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "W-USD-SWAP-LIN",
+        "name": "W",
+        "referencePair": "W/USDT",
+        "base": "W",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "AXL-USD-SWAP-LIN",
+        "name": "AXL",
+        "referencePair": "AXL/USDT",
+        "base": "AXL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CAKE-USD-SWAP-LIN",
+        "name": "CAKE",
+        "referencePair": "CAKE/USDT",
+        "base": "CAKE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SAND-USD-SWAP-LIN",
+        "name": "SAND",
+        "referencePair": "SAND/USDT",
+        "base": "SAND",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "APE-USD-SWAP-LIN",
+        "name": "APE",
+        "referencePair": "APE/USDT",
+        "base": "APE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MANEKI-USD-SWAP-LIN",
+        "name": "MANEKI",
+        "referencePair": "MANEKI/USDT",
+        "base": "MANEKI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "HNT-USD-SWAP-LIN",
+        "name": "HNT",
+        "referencePair": "HNT/USDT",
+        "base": "HNT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "AEVO-USD-SWAP-LIN",
+        "name": "AEVO",
+        "referencePair": "AEVO/USDT",
+        "base": "AEVO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "OM-USD-SWAP-LIN",
+        "name": "OM",
+        "referencePair": "OM/USDT",
+        "base": "OM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "WOO-USD-SWAP-LIN",
+        "name": "WOO",
+        "referencePair": "WOO/USDT",
+        "base": "WOO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CRV-USD-SWAP-LIN",
+        "name": "CRV",
+        "referencePair": "CRV/USDT",
+        "base": "CRV",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "AERO-USD-SWAP-LIN",
+        "name": "AERO",
+        "referencePair": "AERO/USDT",
+        "base": "AERO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ARKM-USD-SWAP-LIN",
+        "name": "ARKM",
+        "referencePair": "ARKM/USDT",
+        "base": "ARKM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TRX-USD-SWAP-LIN",
+        "name": "TRX",
+        "referencePair": "TRX/USDT",
+        "base": "TRX",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PAAL-USD-SWAP-LIN",
+        "name": "PAAL",
+        "referencePair": "PAAL/USDT",
+        "base": "PAAL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MOTHER-USD-SWAP-LIN",
+        "name": "MOTHER",
+        "referencePair": "MOTHER/USDT",
+        "base": "MOTHER",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DADDY-USD-SWAP-LIN",
+        "name": "DADDY",
+        "referencePair": "DADDY/USDT",
+        "base": "DADDY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "FRIEND-USD-SWAP-LIN",
+        "name": "FRIEND",
+        "referencePair": "FRIEND/USDT",
+        "base": "FRIEND",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PONKE-USD-SWAP-LIN",
+        "name": "PONKE",
+        "referencePair": "PONKE/USDT",
+        "base": "PONKE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000BONK-USD-SWAP-LIN",
+        "name": "1000BONK",
+        "referencePair": "1000BONK/USDT",
+        "base": "1000BONK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PEPECOIN-USD-SWAP-LIN",
+        "name": "PEPECOIN",
+        "referencePair": "PEPECOIN/USDT",
+        "base": "PEPECOIN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000SHIB-USD-SWAP-LIN",
+        "name": "1000SHIB",
+        "referencePair": "1000SHIB/USDT",
+        "base": "1000SHIB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000FLOKI-USD-SWAP-LIN",
+        "name": "1000FLOKI",
+        "referencePair": "1000FLOKI/USDT",
+        "base": "1000FLOKI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000ANDY-USD-SWAP-LIN",
+        "name": "1000ANDY",
+        "referencePair": "1000ANDY/USDT",
+        "base": "1000ANDY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000PEIPEI-USD-SWAP-LIN",
+        "name": "1000PEIPEI",
+        "referencePair": "1000PEIPEI/USDT",
+        "base": "1000PEIPEI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "1000COQ-USD-SWAP-LIN",
+        "name": "1000COQ",
+        "referencePair": "1000COQ/USDT",
+        "base": "1000COQ",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SLERF-USD-SWAP-LIN",
+        "name": "SLERF",
+        "referencePair": "SLERF/USDT",
+        "base": "SLERF",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PURR-USD-SWAP-LIN",
+        "name": "PURR",
+        "referencePair": "PURR/USDT",
+        "base": "PURR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MICHI-USD-SWAP-LIN",
+        "name": "MICHI",
+        "referencePair": "MICHI/USDT",
+        "base": "MICHI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000MAGA-USD-SWAP-LIN",
+        "name": "1000MAGA",
+        "referencePair": "1000MAGA/USDT",
+        "base": "1000MAGA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BLAST-USD-SWAP-LIN",
+        "name": "BLAST",
+        "referencePair": "BLAST/USDT",
+        "base": "BLAST",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "REDO-USD-SWAP-LIN",
+        "name": "REDO",
+        "referencePair": "REDO/USDT",
+        "base": "REDO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TURBO-USD-SWAP-LIN",
+        "name": "TURBO",
+        "referencePair": "TURBO/USDT",
+        "base": "TURBO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "WOLF-USD-SWAP-LIN",
+        "name": "WOLF",
+        "referencePair": "WOLF/USDT",
+        "base": "WOLF",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "BILLY-USD-SWAP-LIN",
+        "name": "BILLY",
+        "referencePair": "BILLY/USDT",
+        "base": "BILLY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "GIGA-USD-SWAP-LIN",
+        "name": "GIGA",
+        "referencePair": "GIGA/USDT",
+        "base": "GIGA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "GME-USD-SWAP-LIN",
+        "name": "GME",
+        "referencePair": "GME/USDT",
+        "base": "GME",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "1000HOPPY-USD-SWAP-LIN",
+        "name": "1000HOPPY",
+        "referencePair": "1000HOPPY/USDT",
+        "base": "1000HOPPY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "BAKED-USD-SWAP-LIN",
+        "name": "BAKED",
+        "referencePair": "BAKED/USDT",
+        "base": "BAKED",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "1000MUMU-USD-SWAP-LIN",
+        "name": "1000MUMU",
+        "referencePair": "1000MUMU/USDT",
+        "base": "1000MUMU",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "SHARKCAT-USD-SWAP-LIN",
+        "name": "SHARKCAT",
+        "referencePair": "SHARKCAT/USDT",
+        "base": "SHARKCAT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "NUB-USD-SWAP-LIN",
+        "name": "NUB",
+        "referencePair": "NUB/USDT",
+        "base": "NUB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "NOT-USD-SWAP-LIN",
+        "name": "NOT",
+        "referencePair": "NOT/USDT",
+        "base": "NOT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "FIGHT-USD-SWAP-LIN",
+        "name": "FIGHT",
+        "referencePair": "FIGHT/USDT",
+        "base": "FIGHT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "APU-USD-SWAP-LIN",
+        "name": "APU",
+        "referencePair": "APU/USDT",
+        "base": "APU",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "PEOPLE-USD-SWAP-LIN",
+        "name": "PEOPLE",
+        "referencePair": "PEOPLE/USDT",
+        "base": "PEOPLE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "NPC-USD-SWAP-LIN",
+        "name": "NPC",
+        "referencePair": "NPC/USDT",
+        "base": "NPC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "1000BOBO-USD-SWAP-LIN",
+        "name": "1000BOBO",
+        "referencePair": "1000BOBO/USDT",
+        "base": "1000BOBO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "1000WEN-USD-SWAP-LIN",
+        "name": "1000WEN",
+        "referencePair": "1000WEN/USDT",
+        "base": "1000WEN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "MYRO-USD-SWAP-LIN",
+        "name": "MYRO",
+        "referencePair": "MYRO/USDT",
+        "base": "MYRO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DMAGA-USD-SWAP-LIN",
+        "name": "DMAGA",
+        "referencePair": "DMAGA/USDT",
+        "base": "DMAGA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "ZK-USD-SWAP-LIN",
+        "name": "ZK",
+        "referencePair": "ZK/USDT",
+        "base": "ZK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ZRO-USD-SWAP-LIN",
+        "name": "ZRO",
+        "referencePair": "ZRO/USDT",
+        "base": "ZRO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "ZYN-USD-SWAP-LIN",
+        "name": "ZYN",
+        "referencePair": "ZYN/USDT",
+        "base": "ZYN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "TREMP-USD-SWAP-LIN",
+        "name": "TREMP",
+        "referencePair": "TREMP/USDT",
+        "base": "TREMP",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BANANA-USD-SWAP-LIN",
+        "name": "BANANA",
+        "referencePair": "BANANA/USDT",
+        "base": "BANANA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "LOCKIN-USD-SWAP-LIN",
+        "name": "LOCKIN",
+        "referencePair": "LOCKIN/USDT",
+        "base": "LOCKIN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "CHUD-USD-SWAP-LIN",
+        "name": "CHUD",
+        "referencePair": "CHUD/USDT",
+        "base": "CHUD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "AURA-USD-SWAP-LIN",
+        "name": "AURA",
+        "referencePair": "AURA/USDT",
+        "base": "AURA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "SIGMA-USD-SWAP-LIN",
+        "name": "SIGMA",
+        "referencePair": "SIGMA/USDT",
+        "base": "SIGMA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "SELFIE-USD-SWAP-LIN",
+        "name": "SELFIE",
+        "referencePair": "SELFIE/USDT",
+        "base": "SELFIE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "MIGGLES-USD-SWAP-LIN",
+        "name": "MIGGLES",
+        "referencePair": "MIGGLES/USDT",
+        "base": "MIGGLES",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "SCF-USD-SWAP-LIN",
+        "name": "SCF",
+        "referencePair": "SCF/USDT",
+        "base": "SCF",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "1000USA-USD-SWAP-LIN",
+        "name": "1000USA",
+        "referencePair": "1000USA/USDT",
+        "base": "1000USA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "1000WHY-USD-SWAP-LIN",
+        "name": "1000WHY",
+        "referencePair": "1000WHY/USDT",
+        "base": "1000WHY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "1000MAD-USD-SWAP-LIN",
+        "name": "1000MAD",
+        "referencePair": "1000MAD/USDT",
+        "base": "1000MAD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "MINI-USD-SWAP-LIN",
+        "name": "MINI",
+        "referencePair": "MINI/USDT",
+        "base": "MINI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "BRAINLET-USD-SWAP-LIN",
+        "name": "BRAINLET",
+        "referencePair": "BRAINLET/USDT",
+        "base": "BRAINLET",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "HEHE-USD-SWAP-LIN",
+        "name": "HEHE",
+        "referencePair": "HEHE/USDT",
+        "base": "HEHE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "1000TOSHI-USD-SWAP-LIN",
+        "name": "1000TOSHI",
+        "referencePair": "1000TOSHI/USDT",
+        "base": "1000TOSHI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "10000CAW-USD-SWAP-LIN",
+        "name": "10000CAW",
+        "referencePair": "10000CAW/USDT",
+        "base": "10000CAW",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "GROK-USD-SWAP-LIN",
+        "name": "GROK",
+        "referencePair": "GROK/USDT",
+        "base": "GROK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "NEIRO1-USD-SWAP-LIN",
+        "name": "NEIRO1",
+        "referencePair": "NEIRO1/USDT",
+        "base": "NEIRO1",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "KENDU-USD-SWAP-LIN",
+        "name": "KENDU",
+        "referencePair": "KENDU/USDT",
+        "base": "KENDU",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "DOG-USD-SWAP-LIN",
+        "name": "DOG",
+        "referencePair": "DOG/USDT",
+        "base": "DOG",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "1000GINNAN-USD-SWAP-LIN",
+        "name": "1000GINNAN",
+        "referencePair": "1000GINNAN/USDT",
+        "base": "1000GINNAN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "NEIROETH-USD-SWAP-LIN",
+        "name": "NEIROETH",
+        "referencePair": "NEIROETH/USDT",
+        "base": "NEIROETH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "GMX-USD-SWAP-LIN",
+        "name": "GMX",
+        "referencePair": "GMX/USDT",
+        "base": "GMX",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "FWOG-USD-SWAP-LIN",
+        "name": "FWOG",
+        "referencePair": "FWOG/USDT",
+        "base": "FWOG",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "SKBDI-USD-SWAP-LIN",
+        "name": "SKBDI",
+        "referencePair": "SKBDI/USDT",
+        "base": "SKBDI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "1000WUF-USD-SWAP-LIN",
+        "name": "1000WUF",
+        "referencePair": "1000WUF/USDT",
+        "base": "1000WUF",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "1.324"
+    },
+    {
+        "marketCode": "ZEC-USD-SWAP-LIN",
+        "name": "ZEC",
+        "referencePair": "ZEC/USDT",
+        "base": "ZEC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "UWU-USD-SWAP-LIN",
+        "name": "UWU",
+        "referencePair": "UWU/USDT",
+        "base": "UWU",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "HABIBI-USD-SWAP-LIN",
+        "name": "HABIBI",
+        "referencePair": "HABIBI/USDT",
+        "base": "HABIBI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "DUKO-USD-SWAP-LIN",
+        "name": "DUKO",
+        "referencePair": "DUKO/USDT",
+        "base": "DUKO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "1000NEIRO1ETH-USD-SWAP-LIN",
+        "name": "1000NEIRO1ETH",
+        "referencePair": "1000NEIRO1ETH/USDT",
+        "base": "1000NEIRO1ETH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "SUNDOG-USD-SWAP-LIN",
+        "name": "SUNDOG",
+        "referencePair": "SUNDOG/USDT",
+        "base": "SUNDOG",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SUN-USD-SWAP-LIN",
+        "name": "SUN",
+        "referencePair": "SUN/USDT",
+        "base": "SUN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "SUNCAT-USD-SWAP-LIN",
+        "name": "SUNCAT",
+        "referencePair": "SUNCAT/USDT",
+        "base": "SUNCAT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "SUNWUKONG-USD-SWAP-LIN",
+        "name": "SUNWUKONG",
+        "referencePair": "SUNWUKONG/USDT",
+        "base": "SUNWUKONG",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "HEGE-USD-SWAP-LIN",
+        "name": "HEGE",
+        "referencePair": "HEGE/USDT",
+        "base": "HEGE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "1000CAT-USD-SWAP-LIN",
+        "name": "1000CAT",
+        "referencePair": "1000CAT/USDT",
+        "base": "1000CAT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "ORDER-USD-SWAP-LIN",
+        "name": "ORDER",
+        "referencePair": "ORDER/USDT",
+        "base": "ORDER",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "FOUR-USD-SWAP-LIN",
+        "name": "FOUR",
+        "referencePair": "FOUR/USDT",
+        "base": "FOUR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "BULL-USD-SWAP-LIN",
+        "name": "BULL",
+        "referencePair": "BULL/USDT",
+        "base": "BULL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000PORK-USD-SWAP-LIN",
+        "name": "1000PORK",
+        "referencePair": "1000PORK/USDT",
+        "base": "1000PORK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "RSNOOFI-USD-SWAP-LIN",
+        "name": "RSNOOFI",
+        "referencePair": "R/SNOOFI/USDT",
+        "base": "R/SNOOFI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "SLF-USD-SWAP-LIN",
+        "name": "SLF",
+        "referencePair": "SLF/USDT",
+        "base": "SLF",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "KAS-USD-SWAP-LIN",
+        "name": "KAS",
+        "referencePair": "KAS/USDT",
+        "base": "KAS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "VISTA-USD-SWAP-LIN",
+        "name": "VISTA",
+        "referencePair": "VISTA/USDT",
+        "base": "VISTA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "POL-USD-SWAP-LIN",
+        "name": "POL",
+        "referencePair": "POL/USDT",
+        "base": "POL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DOGS-USD-SWAP-LIN",
+        "name": "DOGS",
+        "referencePair": "DOGS/USDT",
+        "base": "DOGS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "wDOG-USD-SWAP-LIN",
+        "name": "wDOG",
+        "referencePair": "wDOG/USDT",
+        "base": "wDOG",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "CKB-USD-SWAP-LIN",
+        "name": "CKB",
+        "referencePair": "CKB/USDT",
+        "base": "CKB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "1000SATS-USD-SWAP-LIN",
+        "name": "1000SATS",
+        "referencePair": "1000SATS/USDT",
+        "base": "1000SATS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "MACHI-USD-SWAP-LIN",
+        "name": "MACHI",
+        "referencePair": "MACHI/USDT",
+        "base": "MACHI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "YES-USD-SWAP-LIN",
+        "name": "YES",
+        "referencePair": "YES/USDT",
+        "base": "YES",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "CATE-USD-SWAP-LIN",
+        "name": "CATE",
+        "referencePair": "CATE/USDT",
+        "base": "CATE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "wQUIL-USD-SWAP-LIN",
+        "name": "wQUIL",
+        "referencePair": "wQUIL/USDT",
+        "base": "wQUIL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000BEERCOIN-USD-SWAP-LIN",
+        "name": "1000BEERCOIN",
+        "referencePair": "1000BEERCOIN/USDT",
+        "base": "1000BEERCOIN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "DRIFT-USD-SWAP-LIN",
+        "name": "DRIFT",
+        "referencePair": "DRIFT/USDT",
+        "base": "DRIFT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DEGOD-USD-SWAP-LIN",
+        "name": "DEGOD",
+        "referencePair": "DEGOD/USDT",
+        "base": "DEGOD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "DINERO-USD-SWAP-LIN",
+        "name": "DINERO",
+        "referencePair": "DINERO/USDT",
+        "base": "DINERO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "MOODENG-USD-SWAP-LIN",
+        "name": "MOODENG",
+        "referencePair": "MOODENG/USDT",
+        "base": "MOODENG",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "3AC-USD-SWAP-LIN",
+        "name": "3AC",
+        "referencePair": "3AC/USDT",
+        "base": "3AC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "EIGEN-USD-SWAP-LIN",
+        "name": "EIGEN",
+        "referencePair": "EIGEN/USDT",
+        "base": "EIGEN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "BOBAOPPA-USD-SWAP-LIN",
+        "name": "BOBAOPPA",
+        "referencePair": "BOBAOPPA/USDT",
+        "base": "BOBAOPPA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "MANYU-USD-SWAP-LIN",
+        "name": "MANYU",
+        "referencePair": "MANYU/USDT",
+        "base": "MANYU",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "POCHITA-USD-SWAP-LIN",
+        "name": "POCHITA",
+        "referencePair": "POCHITA/USDT",
+        "base": "POCHITA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "100000BABYDOGE-USD-SWAP-LIN",
+        "name": "100000BABYDOGE",
+        "referencePair": "100000BABYDOGE/USDT",
+        "base": "100000BABYDOGE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "1000BLUB-USD-SWAP-LIN",
+        "name": "1000BLUB",
+        "referencePair": "1000BLUB/USDT",
+        "base": "1000BLUB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "1000FUD-USD-SWAP-LIN",
+        "name": "1000FUD",
+        "referencePair": "1000FUD/USDT",
+        "base": "1000FUD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "HIPPO-USD-SWAP-LIN",
+        "name": "HIPPO",
+        "referencePair": "HIPPO/USDT",
+        "base": "HIPPO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "FTT-USD-SWAP-LIN",
+        "name": "FTT",
+        "referencePair": "FTT/USDT",
+        "base": "FTT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "BABYBNB-USD-SWAP-LIN",
+        "name": "BABYBNB",
+        "referencePair": "BABYBNB/USDT",
+        "base": "BABYBNB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "GIKO-USD-SWAP-LIN",
+        "name": "GIKO",
+        "referencePair": "GIKO/USDT",
+        "base": "GIKO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "1000CHEEMS-USD-SWAP-LIN",
+        "name": "1000CHEEMS",
+        "referencePair": "1000CHEEMS/USDT",
+        "base": "1000CHEEMS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "STX-USD-SWAP-LIN",
+        "name": "STX",
+        "referencePair": "STX/USDT",
+        "base": "STX",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "AR-USD-SWAP-LIN",
+        "name": "AR",
+        "referencePair": "AR/USDT",
+        "base": "AR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "RENDER-USD-SWAP-LIN",
+        "name": "RENDER",
+        "referencePair": "RENDER/USDT",
+        "base": "RENDER",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "SAGA-USD-SWAP-LIN",
+        "name": "SAGA",
+        "referencePair": "SAGA/USDT",
+        "base": "SAGA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "CFX-USD-SWAP-LIN",
+        "name": "CFX",
+        "referencePair": "CFX/USDT",
+        "base": "CFX",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "IO-USD-SWAP-LIN",
+        "name": "IO",
+        "referencePair": "IO/USDT",
+        "base": "IO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "RDNT-USD-SWAP-LIN",
+        "name": "RDNT",
+        "referencePair": "RDNT/USDT",
+        "base": "RDNT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "ROCKY-USD-SWAP-LIN",
+        "name": "ROCKY",
+        "referencePair": "ROCKY/USDT",
+        "base": "ROCKY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "RAPR-USD-SWAP-LIN",
+        "name": "RAPR",
+        "referencePair": "RAPR/USDT",
+        "base": "RAPR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "GOAT-USD-SWAP-LIN",
+        "name": "GOAT",
+        "referencePair": "GOAT/USDT",
+        "base": "GOAT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "XD-USD-SWAP-LIN",
+        "name": "XD",
+        "referencePair": "XD/USDT",
+        "base": "XD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "1000RBT-USD-SWAP-LIN",
+        "name": "1000RBT",
+        "referencePair": "1000RBT/USDT",
+        "base": "1000RBT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "JOE-USD-SWAP-LIN",
+        "name": "JOE",
+        "referencePair": "JOE/USDT",
+        "base": "JOE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "GLORP-USD-SWAP-LIN",
+        "name": "GLORP",
+        "referencePair": "GLORP/USDT",
+        "base": "GLORP",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "GNON-USD-SWAP-LIN",
+        "name": "GNON",
+        "referencePair": "GNON/USDT",
+        "base": "GNON",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ACT-USD-SWAP-LIN",
+        "name": "ACT",
+        "referencePair": "ACT/USDT",
+        "base": "ACT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "WYAC-USD-SWAP-LIN",
+        "name": "WYAC",
+        "referencePair": "WYAC/USDT",
+        "base": "WYAC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "FARTCOIN-USD-SWAP-LIN",
+        "name": "FARTCOIN",
+        "referencePair": "FARTCOIN/USDT",
+        "base": "FARTCOIN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "SHOGGOTH-USD-SWAP-LIN",
+        "name": "SHOGGOTH",
+        "referencePair": "SHOGGOTH/USDT",
+        "base": "SHOGGOTH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "10"
+    },
+    {
+        "marketCode": "COBY-USD-SWAP-LIN",
+        "name": "COBY",
+        "referencePair": "COBY/USDT",
+        "base": "COBY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "ELGATO-USD-SWAP-LIN",
+        "name": "ELGATO",
+        "referencePair": "ELGATO/USDT",
+        "base": "ELGATO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1000"
+    },
+    {
+        "marketCode": "DOLAN-USD-SWAP-LIN",
+        "name": "DOLAN",
+        "referencePair": "DOLAN/USDT",
+        "base": "DOLAN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CREAM-USD-SWAP-LIN",
+        "name": "CREAM",
+        "referencePair": "CREAM/USDT",
+        "base": "CREAM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "YAKUB-USD-SWAP-LIN",
+        "name": "YAKUB",
+        "referencePair": "YAKUB/USDT",
+        "base": "YAKUB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "LUCE-USD-SWAP-LIN",
+        "name": "LUCE",
+        "referencePair": "LUCE/USDT",
+        "base": "LUCE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "VIRTUAL-USD-SWAP-LIN",
+        "name": "VIRTUAL",
+        "referencePair": "VIRTUAL/USDT",
+        "base": "VIRTUAL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "LUNAVIRTUALS-USD-SWAP-LIN",
+        "name": "LUNA(VIRTUALS)",
+        "referencePair": "LUNAVIRTUALS/USDT",
+        "base": "LUNA-VIRTUALS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "GAME-USD-SWAP-LIN",
+        "name": "GAME",
+        "referencePair": "GAME/USDT",
+        "base": "GAME",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BAN-USD-SWAP-LIN",
+        "name": "BAN",
+        "referencePair": "BAN/USDT",
+        "base": "BAN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DOGEGOV-USD-SWAP-LIN",
+        "name": "DOGEGOV",
+        "referencePair": "DOGEGOV/USDT",
+        "base": "DOGE-GOV",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MEMESAI-USD-SWAP-LIN",
+        "name": "MemesAI",
+        "referencePair": "MEMESAI/USDT",
+        "base": "MEMESAI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "EACC-USD-SWAP-LIN",
+        "name": "EACC",
+        "referencePair": "EACC/USDT",
+        "base": "EACC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MITCH-USD-SWAP-LIN",
+        "name": "Mitch Index",
+        "referencePair": "MITCH/USDT",
+        "base": "MITCH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TEE-USD-SWAP-LIN",
+        "name": "TEE",
+        "referencePair": "TEE/USDT",
+        "base": "TEE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SCR-USD-SWAP-LIN",
+        "name": "SCR",
+        "referencePair": "SCR/USDT",
+        "base": "SCR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PNUT-USD-SWAP-LIN",
+        "name": "PNUT",
+        "referencePair": "PNUT/USDT",
+        "base": "PNUT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SHRUB-USD-SWAP-LIN",
+        "name": "SHRUB(SOL)",
+        "referencePair": "SHRUB/USDT",
+        "base": "SHRUB",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SHRUBETH-USD-SWAP-LIN",
+        "name": "SHRUB(ETH)",
+        "referencePair": "SHRUBETH/USDT",
+        "base": "SHRUBETH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "GRASS-USD-SWAP-LIN",
+        "name": "GRASS",
+        "referencePair": "GRASS/USDT",
+        "base": "GRASS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "GALAXIS-USD-SWAP-LIN",
+        "name": "GALAXIS",
+        "referencePair": "GALAXIS/USDT",
+        "base": "GALAXIS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "UNFI-USD-SWAP-LIN",
+        "name": "UNFI",
+        "referencePair": "UNFI/USDT",
+        "base": "UNFI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "AGLD-USD-SWAP-LIN",
+        "name": "AGLD",
+        "referencePair": "AGLD/USDT",
+        "base": "AGLD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "NLK-USD-SWAP-LIN",
+        "name": "NLK",
+        "referencePair": "NLK/USDT",
+        "base": "NLK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TROY-USD-SWAP-LIN",
+        "name": "TROY",
+        "referencePair": "TROY/USDT",
+        "base": "TROY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SXP-USD-SWAP-LIN",
+        "name": "SXP",
+        "referencePair": "SXP/USDT",
+        "base": "SXP",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MAV-USD-SWAP-LIN",
+        "name": "MAV",
+        "referencePair": "MAV/USDT",
+        "base": "MAV",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DEAI-USD-SWAP-LIN",
+        "name": "DEAI",
+        "referencePair": "DEAI/USDT",
+        "base": "DEAI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ANSEM-USD-SWAP-LIN",
+        "name": "Ansem Index",
+        "referencePair": "ANSEM/USDT",
+        "base": "ANSEM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MURAD-USD-SWAP-LIN",
+        "name": "Mürad Index",
+        "referencePair": "MURAD/USDT",
+        "base": "MURAD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PUMPFUN-USD-SWAP-LIN",
+        "name": "Pump Fun Index",
+        "referencePair": "PUMPFUN/USDT",
+        "base": "PUMPFUN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "KHAI-USD-SWAP-LIN",
+        "name": "KHAI",
+        "referencePair": "KHAI/USDT",
+        "base": "KHAI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PUPS2-USD-SWAP-LIN",
+        "name": "PUPS",
+        "referencePair": "PUPS2/USDT",
+        "base": "PUPS2",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "COW-USD-SWAP-LIN",
+        "name": "COW",
+        "referencePair": "COW/USDT",
+        "base": "COW",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CETUS-USD-SWAP-LIN",
+        "name": "CETUS",
+        "referencePair": "CETUS/USDT",
+        "base": "CETUS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "KAIA-USD-SWAP-LIN",
+        "name": "KAIA",
+        "referencePair": "KAIA/USDT",
+        "base": "KAIA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "LUMIA-USD-SWAP-LIN",
+        "name": "LUMIA",
+        "referencePair": "LUMIA/USDT",
+        "base": "LUMIA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PANDORA-USD-SWAP-LIN",
+        "name": "PANDORA",
+        "referencePair": "PANDORA/USDT",
+        "base": "PANDORA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.001"
+    },
+    {
+        "marketCode": "ZEREBRO-USD-SWAP-LIN",
+        "name": "ZEREBRO",
+        "referencePair": "ZEREBRO/USDT",
+        "base": "ZEREBRO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "EARL-USD-SWAP-LIN",
+        "name": "EARL",
+        "referencePair": "EARL/USDT",
+        "base": "EARL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TIGER-USD-SWAP-LIN",
+        "name": "Tiger Index",
+        "referencePair": "TIGER/USDT",
+        "base": "TIGER",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "HAWKTUAH-USD-SWAP-LIN",
+        "name": "Hawk Tuah Index",
+        "referencePair": "HAWKTUAH/USDT",
+        "base": "HAWKTUAH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "HAPPY-USD-SWAP-LIN",
+        "name": "HAPPY",
+        "referencePair": "HAPPY/USDT",
+        "base": "HAPPY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TSUKA-USD-SWAP-LIN",
+        "name": "TSUKA",
+        "referencePair": "TSUKA/USDT",
+        "base": "TSUKA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PANGBOY-USD-SWAP-LIN",
+        "name": "Pangboy Index",
+        "referencePair": "PANGBOY/USDT",
+        "base": "PANGBOY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PIPPIN-USD-SWAP-LIN",
+        "name": "PIPPIN",
+        "referencePair": "PIPPIN/USDT",
+        "base": "PIPPIN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DOGEGOVSOL-USD-SWAP-LIN",
+        "name": "DOGEGOV(SOL)",
+        "referencePair": "DOGEGOVSOL/USDT",
+        "base": "DOGEGOVSOL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "STONKS-USD-SWAP-LIN",
+        "name": "1000STONKS",
+        "referencePair": "STONKS/USDT",
+        "base": "STONKS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SUWI-USD-SWAP-LIN",
+        "name": "SUWI",
+        "referencePair": "SUWI/USDT",
+        "base": "SUWI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "FRED-USD-SWAP-LIN",
+        "name": "FRED",
+        "referencePair": "FRED/USDT",
+        "base": "FRED",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BASEDSOL-USD-SWAP-LIN",
+        "name": "BASED(SOL)",
+        "referencePair": "BASEDSOL/USDT",
+        "base": "BASEDSOL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BERT-USD-SWAP-LIN",
+        "name": "BERT",
+        "referencePair": "BERT/USDT",
+        "base": "BERT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "LESTER-USD-SWAP-LIN",
+        "name": "LESTER",
+        "referencePair": "LESTER/USDT",
+        "base": "LESTER",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "AVA-USD-SWAP-LIN",
+        "name": "AVA",
+        "referencePair": "AVA/USDT",
+        "base": "AVA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BARSIK-USD-SWAP-LIN",
+        "name": "BARSIK",
+        "referencePair": "BARSIK/USDT",
+        "base": "BARSIK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "RIF-USD-SWAP-LIN",
+        "name": "$RIF",
+        "referencePair": "RIF/USDT",
+        "base": "RIF",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "URO-USD-SWAP-LIN",
+        "name": "$URO",
+        "referencePair": "URO/USDT",
+        "base": "URO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CHEYENNE-USD-SWAP-LIN",
+        "name": "CHEYENNE",
+        "referencePair": "CHEYENNE/USDT",
+        "base": "CHEYENNE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "KWEEN-USD-SWAP-LIN",
+        "name": "KWEEN",
+        "referencePair": "KWEEN/USDT",
+        "base": "KWEEN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ZEUS-USD-SWAP-LIN",
+        "name": "ZEUS",
+        "referencePair": "ZEUS/USDT",
+        "base": "ZEUS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "AIMEMECOIN-USD-SWAP-LIN",
+        "name": "AI Memecoin Index",
+        "referencePair": "AIMEMECOIN/USDT",
+        "base": "AIMEMECOIN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BUCK-USD-SWAP-LIN",
+        "name": "BUCK",
+        "referencePair": "BUCK/USDT",
+        "base": "BUCK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "VVAIFU-USD-SWAP-LIN",
+        "name": "vvaifu",
+        "referencePair": "VVAIFU/USDT",
+        "base": "VVAIFU",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "KEYCAT-USD-SWAP-LIN",
+        "name": "KEYCAT",
+        "referencePair": "KEYCAT/USDT",
+        "base": "KEYCAT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "HIGHER-USD-SWAP-LIN",
+        "name": "HIGHER",
+        "referencePair": "HIGHER/USDT",
+        "base": "HIGHER",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "LUM-USD-SWAP-LIN",
+        "name": "LUM",
+        "referencePair": "LUM/USDT",
+        "base": "LUM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "AIXBT-USD-SWAP-LIN",
+        "name": "AIXBT",
+        "referencePair": "AIXBT/USDT",
+        "base": "AIXBT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ELIZA-USD-SWAP-LIN",
+        "name": "ELIZA",
+        "referencePair": "ELIZA/USDT",
+        "base": "ELIZA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "WORM-USD-SWAP-LIN",
+        "name": "WORM",
+        "referencePair": "WORM/USDT",
+        "base": "WORM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CATANA-USD-SWAP-LIN",
+        "name": "CATANA",
+        "referencePair": "CATANA/USDT",
+        "base": "CATANA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "QUANT-USD-SWAP-LIN",
+        "name": "QUANT",
+        "referencePair": "QUANT/USDT",
+        "base": "QUANT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000JESUS-USD-SWAP-LIN",
+        "name": "1000JESUS",
+        "referencePair": "1000JESUS/USDT",
+        "base": "1000JESUS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "100"
+    },
+    {
+        "marketCode": "CHILLGUY-USD-SWAP-LIN",
+        "name": "CHILLGUY",
+        "referencePair": "CHILLGUY/USDT",
+        "base": "CHILLGUY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ANON-USD-SWAP-LIN",
+        "name": "ANON",
+        "referencePair": "ANON/USDT",
+        "base": "ANON",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "XLM-USD-SWAP-LIN",
+        "name": "XLM",
+        "referencePair": "XLM/USDT",
+        "base": "XLM",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "KACY-USD-SWAP-LIN",
+        "name": "KACY",
+        "referencePair": "KACY/USDT",
+        "base": "KACY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "BULLY-USD-SWAP-LIN",
+        "name": "BULLY",
+        "referencePair": "BULLY/USDT",
+        "base": "BULLY",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CRASHOUT-USD-SWAP-LIN",
+        "name": "CRASHOUT",
+        "referencePair": "CRASHOUT/USDT",
+        "base": "CRASHOUT",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CLANKER-USD-SWAP-LIN",
+        "name": "CLANKER",
+        "referencePair": "CLANKER/USDT",
+        "base": "CLANKER",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "REI-USD-SWAP-LIN",
+        "name": "REI",
+        "referencePair": "REI/USDT",
+        "base": "REI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "AI16Z-USD-SWAP-LIN",
+        "name": "AI16Z",
+        "referencePair": "AI16Z/USDT",
+        "base": "AI16Z",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MUSTARD-USD-SWAP-LIN",
+        "name": "MUSTARD",
+        "referencePair": "MUSTARD/USDT",
+        "base": "MUSTARD",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ASTRO-USD-SWAP-LIN",
+        "name": "Astro Index",
+        "referencePair": "ASTRO/USDT",
+        "base": "ASTRO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "PURPE-USD-SWAP-LIN",
+        "name": "1000PURPE",
+        "referencePair": "PURPE/USDT",
+        "base": "PURPE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "EVAN-USD-SWAP-LIN",
+        "name": "EVAN",
+        "referencePair": "EVAN/USDT",
+        "base": "EVAN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "TORN-USD-SWAP-LIN",
+        "name": "TORN",
+        "referencePair": "TORN/USDT",
+        "base": "TORN",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "UBC-USD-SWAP-LIN",
+        "name": "UBC",
+        "referencePair": "UBC/USDT",
+        "base": "UBC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1-USD-SWAP-LIN",
+        "name": "$1",
+        "referencePair": "1/USDT",
+        "base": "1",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "1000RIZZMAS-USD-SWAP-LIN",
+        "name": "1000RIZZMAS",
+        "referencePair": "1000RIZZMAS/USDT",
+        "base": "1000RIZZMAS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "HYPE-USD-SWAP-LIN",
+        "name": "HYPE",
+        "referencePair": "HYPE/USDT",
+        "base": "HYPE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "OPUS-USD-SWAP-LIN",
+        "name": "OPUS",
+        "referencePair": "OPUS/USDT",
+        "base": "OPUS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "WIFE-USD-SWAP-LIN",
+        "name": "WIFE",
+        "referencePair": "WIFE/USDT",
+        "base": "WIFE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PAJAMAS-USD-SWAP-LIN",
+        "name": "PAJAMAS",
+        "referencePair": "PAJAMAS/USDT",
+        "base": "PAJAMAS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SKI-USD-SWAP-LIN",
+        "name": "SKI",
+        "referencePair": "SKI/USDT",
+        "base": "SKI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ALCH-USD-SWAP-LIN",
+        "name": "ALCH",
+        "referencePair": "ALCH/USDT",
+        "base": "ALCH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "LOL-USD-SWAP-LIN",
+        "name": "LOL",
+        "referencePair": "LOL/USDT",
+        "base": "LOL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "MUNDI-USD-SWAP-LIN",
+        "name": "MUNDI",
+        "referencePair": "MUNDI/USDT",
+        "base": "MUNDI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "HBAR-USD-SWAP-LIN",
+        "name": "HBAR",
+        "referencePair": "HBAR/USDT",
+        "base": "HBAR",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "EOS-USD-SWAP-LIN",
+        "name": "EOS",
+        "referencePair": "EOS/USDT",
+        "base": "EOS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ETC-USD-SWAP-LIN",
+        "name": "ETC",
+        "referencePair": "ETC/USDT",
+        "base": "ETC",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "XTZ-USD-SWAP-LIN",
+        "name": "XTZ",
+        "referencePair": "XTZ/USDT",
+        "base": "XTZ",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "DINO-USD-SWAP-LIN",
+        "name": "Dino Index",
+        "referencePair": "DINO/USDT",
+        "base": "DINO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CAH-USD-SWAP-LIN",
+        "name": "CAH",
+        "referencePair": "CAH/USDT",
+        "base": "CAH",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "EMP-USD-SWAP-LIN",
+        "name": "EMP",
+        "referencePair": "EMP/USDT",
+        "base": "EMP",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.01",
+        "minSize": "0.01"
+    },
+    {
+        "marketCode": "SIMMI-USD-SWAP-LIN",
+        "name": "SIMMI",
+        "referencePair": "SIMMI/USDT",
+        "base": "SIMMI",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "CHAOS-USD-SWAP-LIN",
+        "name": "CHAOS",
+        "referencePair": "CHAOS/USDT",
+        "base": "CHAOS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "NOTICKER-USD-SWAP-LIN",
+        "name": "(noticker)",
+        "referencePair": "NOTICKER/USDT",
+        "base": "NOTICKER",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "HAWK-USD-SWAP-LIN",
+        "name": "HAWK",
+        "referencePair": "HAWK/USDT",
+        "base": "HAWK",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.000001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "ALGO-USD-SWAP-LIN",
+        "name": "ALGO",
+        "referencePair": "ALGO/USDT",
+        "base": "ALGO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "IOTA-USD-SWAP-LIN",
+        "name": "IOTA",
+        "referencePair": "IOTA/USDT",
+        "base": "IOTA",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "THE-USD-SWAP-LIN",
+        "name": "THE",
+        "referencePair": "THE/USDT",
+        "base": "THE",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "SHFL-USD-SWAP-LIN",
+        "name": "SHFL",
+        "referencePair": "SHFL/USDT",
+        "base": "SHFL",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.00001",
+        "minSize": "1"
+    },
+    {
+        "marketCode": "PEAS-USD-SWAP-LIN",
+        "name": "PEAS",
+        "referencePair": "PEAS/USDT",
+        "base": "PEAS",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.001",
+        "minSize": "0.1"
+    },
+    {
+        "marketCode": "SHIRO-USD-SWAP-LIN",
+        "name": "1000SHIRO",
+        "referencePair": "SHIRO/USDT",
+        "base": "SHIRO",
+        "counter": "USD",
+        "type": "FUTURE",
+        "tickSize": "0.0000001",
+        "minSize": "1"
+    }
+]
