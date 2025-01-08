@@ -1,13 +1,5 @@
 import { getToasterState } from "$lib/context/toaster.svelte";
 
-export const truncateString = (string: string, startLength: number, endLength: number, filler: string = "…") => {
-    if (string.length <= startLength + endLength) {
-        return string;
-    };
-
-    return `${string.slice(0, startLength)}${filler}${string.slice(-endLength)}`;
-};
-
 export const copy = (node: HTMLElement, params: { text: string }) => {
     // todo: check if this is fine to do?
     // this works but is it good practice?
@@ -31,6 +23,8 @@ export const copy = (node: HTMLElement, params: { text: string }) => {
     };
 
     node.addEventListener("click", handleClick);
+
+    // todo: use runes instead of update() and destroy()
 
     return {
         update(newParams: { text: string }) {

@@ -7,6 +7,11 @@ import {
     WALLET_PUBLIC_KEY,
 
     CMC_API_KEY,
+
+    KV_URL,
+    KV_REST_API_READ_ONLY_TOKEN,
+    KV_REST_API_TOKEN,
+    KV_REST_API_URL,
 } from "$env/static/private";
 import { z } from "zod";
 
@@ -19,6 +24,11 @@ const envData = {
     WALLET_PUBLIC_KEY,
     
     CMC_API_KEY,
+
+    KV_URL,
+    KV_REST_API_READ_ONLY_TOKEN,
+    KV_REST_API_TOKEN,
+    KV_REST_API_URL,
 };
 
 const envSchema = z.object({
@@ -30,6 +40,11 @@ const envSchema = z.object({
     WALLET_PUBLIC_KEY: z.string(),
 
     CMC_API_KEY: z.string(),
+
+    KV_URL: z.string(),
+    KV_REST_API_READ_ONLY_TOKEN: z.string(),
+    KV_REST_API_TOKEN: z.string(),
+    KV_REST_API_URL: z.string(),
 });
 
 const env = envSchema.parse(envData);
@@ -45,6 +60,14 @@ const config = {
     },
     coinMarketCap: {
         apiKey: env.CMC_API_KEY,
+    },
+    kv: {
+        url: env.KV_URL,
+        rest: {
+            readOnlyToken: env.KV_REST_API_READ_ONLY_TOKEN,
+            token: env.KV_REST_API_TOKEN,
+            url: env.KV_REST_API_URL,
+        },
     },
 };
 

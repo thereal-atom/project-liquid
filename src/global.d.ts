@@ -6,11 +6,11 @@ declare interface Window {
     
             connect: (options?: { onlyIfTrusted?: boolean }) => Promise<{ publicKey }>;
             disconnect: () => Promise<void>;
-            signTransaction: (transaction) => Promise<void>;
-            signAndSendTransaction: (transaction) => Promise<void>;
-            signAllTransactions: (transactions) => Promise<void>;
-            signAndSendAllTransactions: (transactions) => Promise<void>;
-            signMessage: (message: Uint8Array) => Promise<void>;
+            signTransaction: (transaction) => Promise<any>;
+            signAndSendTransaction: (transaction) => Promise<any>;
+            signAllTransactions: (transactions) => Promise<any>;
+            signAndSendAllTransactions: (transactions) => Promise<any>;
+            signMessage: (message: Uint8Array) => Promise<any>;
     
             on: (event: "connect", cb: (publicKey) => void) => void;
         };

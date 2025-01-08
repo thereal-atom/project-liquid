@@ -1,10 +1,38 @@
 import Elysia, { t } from "elysia";
-import { getRaydiumAddLiquidityQuote, getRaydiumPoolData, getRaydiumSwapQuote, raydiumSwap } from "$lib/utils/raydium";
+import { getRaydiumAddLiquidityQuote, getRaydiumPoolData, getRaydiumPoolInfoFromRpc, getRaydiumSwapQuote, raydiumSwap } from "$lib/utils/raydium";
 import { ctx } from "$lib/server/context";
 
 export const poolRouter = new Elysia({ prefix: "/pool"})
     .use(ctx)
     .get("/", "pool router is ok")
+    .get(
+        "/:id/rpc-data",
+        async ({
+            params,
+            raydiumClient,
+        }) => {
+            const rpcPoolData = await getRaydiumPoolInfoFromRpc(raydiumClient, params.id);
+
+            return {
+                rpcData: {
+                    baseReserve: {
+                        amountString: rpcPoolData.poolRpcData.baseReserve.toString(),
+                        uiAmount: rpcPoolData.poolRpcData.baseReserve.toNumber() / 10 ** rpcPoolData.poolInfo.mintA.decimals,
+                        decimals: rpcPoolData.poolInfo.mintA.decimals,
+                        mint: rpcPoolData.poolInfo.mintA.address,
+                    },
+                    quoteReserve: {
+                        amountString: rpcPoolData.poolRpcData.quoteReserve.toString(),
+                        uiAmount: rpcPoolData.poolRpcData.quoteReserve.toNumber() / 10 ** rpcPoolData.poolInfo.mintB.decimals,
+                        decimals: rpcPoolData.poolInfo.mintB.decimals,
+                        mint: rpcPoolData.poolInfo.mintB.address,
+                    },
+                    status: rpcPoolData.poolRpcData.status.toNumber(),
+                },
+                poolKeys: rpcPoolData.poolKeys,
+            };
+        },
+    )
     .get(
         "/:id/quote",
         async ({

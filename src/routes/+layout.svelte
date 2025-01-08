@@ -27,15 +27,13 @@
         if (window.phantom) {
             phantomProvider = getPhantomProvider();
 
-            console.log(phantomProvider);
-
             phantomProvider.on("connect", async (pubKey: PublicKey) => {
                 const pubKeyString = pubKey.toString();
                 if (!pubKeyString) {
                     return;
                 };
 
-                wallet.pubKey = pubKeyString;
+                wallet.pubKeyString = pubKeyString;
 
                 // const walletInfo = await getWallet(wallet.pubKey);
                 // wallet.balance = walletInfo.lamports / 10 ** 9;
@@ -70,4 +68,6 @@
 
 <Toaster />
 
-{@render children()}
+<div class="w-screen max-w-screen">
+    {@render children()}
+</div>

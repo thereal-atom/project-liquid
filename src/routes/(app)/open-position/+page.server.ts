@@ -11,6 +11,10 @@ export const load = (async ({ url }) => {
 
     const defaultRaydiumClient = await initRaydiumClient({}, initRpcConnection("126f686a-fe11-4859-bcb5-5cd78dd4a33b"));
 
+    // this pool data is mostly meta data as well as cached pool data (pooled amounts, tvl, etc)
+    // therefore it can be cached (globally, on the server) for 1-3 minutes 
+    // can be cached for quite a while (i.e. longer than the pooled data is cached, because it's already cached by raydium)
+    // because on page load the rpc data is fetched (which is the most recent data)
     const pools = await defaultRaydiumClient.api.fetchPoolById({ ids: poolId });
     const pool = pools[0] as ApiV3PoolInfoStandardItem;
 

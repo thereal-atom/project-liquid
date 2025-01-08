@@ -1,19 +1,59 @@
+import { LocalStorage } from "$lib/utils/localStorage.svelte";
 import { getContext, setContext } from "svelte";
 
+const TOKEN_ACCOUNTS_KEY = "_pl_tokenAccounts";
+const TOKEN_ACCOUNT_EXPIRY_TIME = 30_000;
+
 const defaultWalletState = {
-    pubKey: null,
-    balance: 0,
+    pubKeyString: null,
+};
+
+interface TokenAccount {
+    mint: string;
+    balance: number;
+    lastUpdatedTimestamp: number;
 };
 
 class WalletState {
-    pubKey: string | null = $state(null);
-    balance: number = $state(0);
+    pubKeyString: string | null = $state(null);
+    // object vs map? map is better but object is proxied but I don't really need this to be proxied in this case
+    tokenAccounts: Map<string, TokenAccount> = $state(new Map());
 
-    constructor() {};
+    private _tokenAccounts = new LocalStorage<Map<string, TokenAccount>>(TOKEN_ACCOUNTS_KEY, new Map());
+
+    constructor() {
+        this.tokenAccounts = this._tokenAccounts.current;
+    };
 
     reset () {
-        this.pubKey = defaultWalletState.pubKey;
-        this.balance = defaultWalletState.balance;
+        this.pubKeyString = defaultWalletState.pubKeyString;
+        this.tokenAccounts = this._tokenAccounts.current;
+    };
+    
+    getTokenAccount(mint: string): TokenAccount | undefined {
+        const now = Date.now();
+        this._tokenAccounts.current.forEach((tokenAccount, key) => {
+            if (tokenAccount.lastUpdatedTimestamp < now - TOKEN_ACCOUNT_EXPIRY_TIME) {
+                this._tokenAccounts.current.delete(key);
+            }
+        });
+
+        this.tokenAccounts = this._tokenAccounts.current;
+
+        return this.tokenAccounts.get(mint); 
+    };
+
+    setTokenAccount(mint: string, accountInfo: { balance: number }): TokenAccount {
+        const newAccount: TokenAccount = {
+            mint,
+            balance: accountInfo.balance,
+            lastUpdatedTimestamp: Date.now(),
+        };
+
+        this._tokenAccounts.current.set(mint, newAccount); 
+        this.tokenAccounts = this._tokenAccounts.current; 
+
+        return newAccount;
     };
 };
 
@@ -26,6 +66,3 @@ export const setWalletState = () => {
 export const getWalletState = () => {
     return getContext<ReturnType<typeof setWalletState>>(WALLET_KEY);
 };
-
-// todo: look at this: https://docs.phantom.com/phantom-deeplinks/handling-sessions (for deeplinks)
-// todo: look at this for types: https://github.com/anza-xyz/wallet-adapter/blob/master/packages/core/base/src/adapter.ts

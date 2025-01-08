@@ -29,7 +29,7 @@
     };
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col w-screen max-w-screen">
     <div class="flex flex-row items-center justify-between p-12 bg-primary">
         <div class="flex flex-row">
             <a
@@ -58,9 +58,9 @@
             </a>
         </div>
         <div class="flex flex-row">
-            {#if wallet.pubKey !== null}
+            {#if wallet.pubKeyString !== null}
                 <p class="h-fit px-4 py-2 font-semibold rounded-md">
-                    {wallet.pubKey.substring(0, 4)}...{wallet.pubKey.substring(wallet.pubKey.length - 4)}
+                    {wallet.pubKeyString.substring(0, 4)}...{wallet.pubKeyString.substring(wallet.pubKeyString.length - 4)}
                 </p>
                 <button
                     class="ml-4 px-4 py-2 bg-indigo-500 font-semibold rounded-md"

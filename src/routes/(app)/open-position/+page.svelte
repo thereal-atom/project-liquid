@@ -1,22 +1,33 @@
 <script lang="ts">
     import { onMount } from "svelte";
-	
     import { type AmmRpcData, type AmmV4Keys, type AmmV5Keys, Percent } from "@raydium-io/raydium-sdk-v2";
 	import { PublicKey } from "@solana/web3.js";
 	import { BN } from "bn.js";
 
 	import Modal from "$lib/components/Modal.svelte";
-	
-	import constants from "$lib/config/constants";
-	import { truncateString, copy } from "$lib/utils/core";
-	import { addRaydiumLiquidity, getRaydiumPoolInfoFromRpc } from "$lib/utils/raydium";
-	import { getPhantomProvider } from "$lib/utils/phantom";
     
-    import { getTokenPrices } from "$lib/api/marketData";
-	
+    import { copy } from "$lib/actions/copy.svelte.js";
     import { getAppState } from "$lib/context/app.svelte";
 	import { getWalletState } from "$lib/context/wallet.svelte";
 	import { getToasterState } from "$lib/context/toaster.svelte.js";
+	
+	import constants from "$lib/config/constants";
+	import { truncateString } from "$lib/utils/common";
+	import { addRaydiumLiquidity, getRaydiumPoolInfoFromRpc } from "$lib/utils/raydium";
+	import { getPhantomProvider } from "$lib/utils/phantom";
+    import { getTokenPrices } from "$lib/api/marketData";
+	
+
+    // todo: useful functions: https://github.com/raydium-io/raydium-ui-v3/blob/master/src/utils/token.ts#L7
+
+    /**
+     * raydium logs: shows what rpc calls are being made
+     * 1736169202783 - rpc: get farm info
+     * 1736169202807 - rpc: get owner token acc info
+     * 1736169203167 - rpc: get owner token2022 acc info
+     * 1736169203578 - rpc: get multiple lp mint acc info
+     * 1736169203578 - rpc: get farm ledger info
+     */
 
     const app = getAppState();
     const wallet = getWalletState();
@@ -48,6 +59,10 @@
         if (!app.raydiumClient) return;
 
         // ! rpc call (every 30 seconds)
+        // something like this would need to be in global cache (potentially server cache or just redis)
+        // cache can be in memory since ttl is so short and doesn't need to be persisted
+        // requires me to use the server to fetch this data rather than client
+        // obviously have had issues with getting the data from server to client so make sure that is sorted
         getRaydiumPoolInfoFromRpc(app.raydiumClient, pool.id).then((_pool) => {
             pool.mintAmountA = _pool.poolInfo.mintAmountA;
             pool.mintAmountB = _pool.poolInfo.mintAmountB;
@@ -66,6 +81,11 @@
     });
 
     onMount(() => {
+        // fetch(`http://localhost:5173/api/pool/${pool.id}/rpc-data`)
+        //     .then(res => {
+        //         console.log(res);
+        //     });
+
         updateTokenPrices();
 
         const updateMarketDataInterval = setInterval(() => {
@@ -73,32 +93,47 @@
             updatePoolData();
         }, 20_000);
 
-        if (!app.connection || !wallet.pubKey) return;
+        const tokenAccountStore = wallet.getTokenAccount(pool.mintB.address);
+        if (!tokenAccountStore || (Date.now() - tokenAccountStore.lastUpdatedTimestamp) > 30_000) {
+            console.log(`fetching token account for ${pool.mintB.address} as local data is ${Date.now() - (tokenAccountStore?.lastUpdatedTimestamp || 0)} ms old`);
+            if (!app.connection || !wallet.pubKeyString) return;
 
-        // ! rpc call - called once
-        // ! rpc once then ws or ws from the start?
-        app.connection
-            .getParsedTokenAccountsByOwner(
-                new PublicKey(wallet.pubKey || ""),
-                // solana token program:
-                { programId: new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")  },
-            )
-            .then(({ value }) => {
-                const tokenAccounts = value;
+            // todo: put into function like getParsedTokenAccountsByOwner(app.connection, wallet.pubKeyString, { mint: new PublicKey(pool.mintB.address) })
+            // todo: ws connection to update this (and also the data in local store.)
+            // ws.on("accountChange", (accountInfo) => ... wallet.setTokenAccount(accountInfo.mint, { balance: accountInfo...balance }));
+            app.connection
+                .getParsedTokenAccountsByOwner(
+                    new PublicKey(wallet.pubKeyString || ""),
+                    // solana token program:
+                    {
+                        mint: new PublicKey(pool.mintB.address),
+                        programId: new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+                    },
+                )
+                .then(({ value }) => {
+                    const mintBTokenAccount = value[0];
+                    if (!mintBTokenAccount) return;
 
-                const mintBTokenAccount = tokenAccounts.find(({ account }) => account.data.parsed.info.mint === pool.mintB.address);
-                const mintBAmount = mintBTokenAccount?.account.data.parsed.info.tokenAmount.uiAmount;
+                    const mintBAmount = mintBTokenAccount.account.data.parsed.info.tokenAmount.uiAmount;
+                    mintBBalance = mintBAmount;
 
-                mintBBalance = mintBAmount || 0;
-            });
+                    wallet.setTokenAccount(pool.mintB.address, {
+                        balance: mintBBalance,
+                    });
+                });
+        } else {
+            mintBBalance = tokenAccountStore.balance;
+        };
 
-        // ! rpc call - called once
-        // ! rpc once then ws or ws from the start?
-        app.connection
-            .getBalance(new PublicKey(wallet.pubKey || ""))
-            .then((balance) => {
-                mintABalance = balance / 10 ** 9;
-            });
+        // if (!app.connection || !wallet.pubKeyString) return;
+
+        // // ! rpc call - called once
+        // // ! rpc once then ws or ws from the start?
+        // app.connection
+        //     .getBalance(new PublicKey(wallet.pubKeyString || ""))
+        //     .then((balance) => {
+        //         mintABalance = balance / 10 ** 9;
+        //     });
 
         return () => clearInterval(updateMarketDataInterval);
     });
