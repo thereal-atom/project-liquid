@@ -62,6 +62,12 @@ export const getRaydiumPoolInfoFromRpc = async (raydiumClient: Raydium, poolId: 
     return poolRpcInfo;
 };
 
+export const getRaydiumPoolInfo = async (raydiumClient: Raydium, poolId: string) => {
+    const poolInfo = await raydiumClient.api.fetchPoolById({ ids: poolId });
+
+    return poolInfo[0] as ApiV3PoolInfoStandardItem | undefined;
+};
+
 // ? get all pool data
 // ? this includes pool info but also rpc data and keys which are often necessary for swaps and liquidity operations
 export const getRaydiumPoolData = async (raydiumClient: Raydium, poolId: string): Promise<RaydiumPoolData> => {

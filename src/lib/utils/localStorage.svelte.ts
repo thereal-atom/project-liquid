@@ -21,9 +21,9 @@ export class LocalStorage<T> {
 		if (typeof localStorage !== "undefined") {
 			if (localStorage.getItem(key) === null) {
 				localStorage.setItem(key, JSON.stringify(initial));
-			}
-		}
-	}
+			};
+		};
+	};
 
 	get current(): T {
 		const root =
@@ -54,11 +54,11 @@ export class LocalStorage<T> {
 						}
 
 						return true;
-					}
+					},
 				});
 
 				proxies.set(value, p);
-			}
+			};
 
 			return p;
 		};

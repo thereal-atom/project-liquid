@@ -1,59 +1,61 @@
 import { LocalStorage } from "$lib/utils/localStorage.svelte";
 import { getContext, setContext } from "svelte";
 
-const TOKEN_ACCOUNTS_KEY = "_pl_tokenAccounts";
-const TOKEN_ACCOUNT_EXPIRY_TIME = 30_000;
+const TOKEN_BALANCES_KEY = "_pl_token-balances";
+// const TOKEN_ACCOUNT_EXPIRY_TIME = 30_000;
 
 const defaultWalletState = {
     pubKeyString: null,
 };
 
 interface TokenAccount {
-    mint: string;
     balance: number;
     lastUpdatedTimestamp: number;
 };
 
 class WalletState {
     pubKeyString: string | null = $state(null);
-    // object vs map? map is better but object is proxied but I don't really need this to be proxied in this case
-    tokenAccounts: Map<string, TokenAccount> = $state(new Map());
+    tokenBalances: Record<string, TokenAccount> = $state({});
 
-    private _tokenAccounts = new LocalStorage<Map<string, TokenAccount>>(TOKEN_ACCOUNTS_KEY, new Map());
+    private _tokenBalances = new LocalStorage<Record<string, TokenAccount>>(TOKEN_BALANCES_KEY, {});
 
     constructor() {
-        this.tokenAccounts = this._tokenAccounts.current;
+        this.tokenBalances = this._tokenBalances.current;
     };
 
     reset () {
         this.pubKeyString = defaultWalletState.pubKeyString;
-        this.tokenAccounts = this._tokenAccounts.current;
+        this.tokenBalances = this._tokenBalances.current;
     };
     
-    getTokenAccount(mint: string): TokenAccount | undefined {
-        const now = Date.now();
-        this._tokenAccounts.current.forEach((tokenAccount, key) => {
-            if (tokenAccount.lastUpdatedTimestamp < now - TOKEN_ACCOUNT_EXPIRY_TIME) {
-                this._tokenAccounts.current.delete(key);
-            }
-        });
+    getTokenBalance(mint: string): number {
+        this.tokenBalances = this._tokenBalances.current;
 
-        this.tokenAccounts = this._tokenAccounts.current;
+        const cachedBalanceData = this.tokenBalances[mint];
+        if (!cachedBalanceData) return 0;
 
-        return this.tokenAccounts.get(mint); 
+        if (Date.now() - cachedBalanceData.lastUpdatedTimestamp > 30_000) {
+            // remove from cache
+
+            return 0;
+        };
+
+        return this.tokenBalances[mint].balance;
     };
 
-    setTokenAccount(mint: string, accountInfo: { balance: number }): TokenAccount {
+    setTokenBalance(mint: string, balance: number): number {
         const newAccount: TokenAccount = {
-            mint,
-            balance: accountInfo.balance,
+            balance,
             lastUpdatedTimestamp: Date.now(),
         };
 
-        this._tokenAccounts.current.set(mint, newAccount); 
-        this.tokenAccounts = this._tokenAccounts.current; 
+        const newTokenAccounts = { ...this._tokenBalances.current };
+        newTokenAccounts[mint] = newAccount;
+        
+        this._tokenBalances.current = newTokenAccounts;
+        this.tokenBalances = this._tokenBalances.current;
 
-        return newAccount;
+        return newAccount.balance;
     };
 };
 

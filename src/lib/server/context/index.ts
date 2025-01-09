@@ -2,8 +2,8 @@ import Elysia from "elysia";
 import config from "../config";
 import { RequestError } from "../utils/errors";
 import { logger } from "../utils/logger";
-import { initRaydiumClient } from "$lib/utils/raydium";
-import { connection } from "../utils/solana";
+// import { initRaydiumClient } from "$lib/utils/raydium";
+// import { connection } from "../utils/solana";
 
 export const ctx = new Elysia({ name: "@app/ctx" })
     .onStart(({ server }) => {
@@ -33,18 +33,20 @@ export const ctx = new Elysia({ name: "@app/ctx" })
                 message: error.message,
             };
         })
-    .resolve(
-        { as: "global" },
-        async ({ headers }) => {
-            const publicKey = headers["x-public-key"];
-            if (!publicKey) {
-                const raydiumClient = await initRaydiumClient({}, connection);
+    // .resolve(
+    //     { as: "global" },
+    //     async ({ headers }) => {
+    //         // this adds ages to request time. seen requests go from 100ms to 1.5s ..
+    //         // might have to change this to only run for specific requests or avoid using raydium client all together.
+    //         const publicKey = headers["x-public-key"];
+    //         if (!publicKey) {
+    //             const raydiumClient = await initRaydiumClient({}, connection);
 
-                return { raydiumClient };
-            };
+    //             return { raydiumClient };
+    //         };
 
-            const raydiumClient = await initRaydiumClient({ ownerPublicKey: publicKey }, connection);
+    //         const raydiumClient = await initRaydiumClient({ ownerPublicKey: publicKey }, connection);
 
-            return { raydiumClient };
-        },
-    );
+    //         return { raydiumClient };
+    //     },
+    // );
