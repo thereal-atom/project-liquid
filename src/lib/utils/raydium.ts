@@ -98,20 +98,26 @@ export const getRaydiumPoolData = async (raydiumClient: Raydium, poolId: string)
     };
 };
 
-export const getRaydiumSwapQuote = (raydiumClient: Raydium, options: GetRaydiumQuoteOptions) => {
-    const amountIn = options.amountSol * 10 ** 9;
+export const getRaydiumSwapQuote = (raydiumClient: Raydium, options: {
+    poolInfo: ApiV3PoolInfoStandardItem,
+    poolRpcData: AmmRpcData,
+    uiAmountIn: number,
+    slippage?: number,
+}) => {
+    const baseIn = true;
+    const amountIn = options.uiAmountIn * 10 ** (baseIn ? options.poolInfo.mintA.decimals : options.poolInfo.mintB.decimals);
     
     const quote = raydiumClient.liquidity.computeAmountOut({
         poolInfo: {
-            ...options.poolData.poolInfo,
-            baseReserve: options.poolData.poolRpcData.baseReserve,
-            quoteReserve: options.poolData.poolRpcData.quoteReserve,
-            status: options.poolData.poolRpcData.status.toNumber(),
+            ...options.poolInfo,
+            baseReserve: options.poolRpcData.baseReserve,
+            quoteReserve: options.poolRpcData.quoteReserve,
+            status: options.poolRpcData.status.toNumber(),
             version: 4,
         },
         amountIn: new BN(amountIn),
-        mintIn: options.poolData.mintIn.address,
-        mintOut: options.poolData.mintOut.address,
+        mintIn: options.poolInfo.mintA.address,
+        mintOut: options.poolInfo.mintB.address,
         // ? default is 1% or 0.01
         slippage: options.slippage
             ? options.slippage
