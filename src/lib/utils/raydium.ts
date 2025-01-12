@@ -1,10 +1,13 @@
-import { constants } from "$lib/config";
-import type { GetRaydiumQuoteOptions, RaydiumPoolData } from "$lib/types/raydium";
+import type { RaydiumPoolData } from "$lib/types/raydium";
+
+import { PublicKey, Connection } from "@solana/web3.js";
 import { AMM_STABLE, AMM_V4, DEVNET_PROGRAM_ID, Percent, Raydium, TokenAmount, toToken, type AmmRpcData, type AmmV4Keys, type AmmV5Keys, type ApiV3PoolInfoStandardItem, type ApiV3Token } from "@raydium-io/raydium-sdk-v2";
 import { NATIVE_MINT } from "@solana/spl-token";
-import { PublicKey, Connection } from "@solana/web3.js";
 import BN from "bn.js";
 import Decimal from "decimal.js";
+
+import { constants } from "$lib/config";
+import { getComputeBudgetConfig } from "./solana";
 
 const VALID_PROGRAM_ID = new Set([
     AMM_V4.toBase58(),
@@ -130,33 +133,34 @@ export const getRaydiumSwapQuote = (raydiumClient: Raydium, options: {
 export const raydiumSwap = async (raydiumClient: Raydium, options: {
     poolInfo: ApiV3PoolInfoStandardItem,
     poolKeys: AmmV5Keys | AmmV4Keys,
-    amountIn: number,
-    amountOut: number,
+    uiAmountIn: number,
+    uiAmountOut: number,
     mintInAddress: string,
 }) => {
     const { transaction } = await raydiumClient.liquidity.swap({
         poolInfo: options.poolInfo,
         poolKeys: options.poolKeys,
-        amountIn: new BN(options.amountIn),
-        amountOut: new BN(options.amountOut),
+        amountIn: new BN(options.uiAmountIn * 10 ** options.poolInfo.mintA.decimals),
+        amountOut: new BN(options.uiAmountOut * 10 ** options.poolInfo.mintB.decimals),
         fixedSide: "in",
         inputMint: options.mintInAddress,
         txVersion: constants.txVersion,
-        // todo: function to get compute budget
-        computeBudgetConfig: {
-            units: 600000,
-            microLamports: 46591500,
-        },
+        computeBudgetConfig: getComputeBudgetConfig(),
     });
 
     return { transaction };
 };
 
-export const getRaydiumAddLiquidityQuote = (raydiumClient: Raydium, options: GetRaydiumQuoteOptions) => {
+export const getRaydiumAddLiquidityQuote = (raydiumClient: Raydium, options: {
+    poolInfo: ApiV3PoolInfoStandardItem,
+    baseIn: boolean,
+    uiAmountIn: number,
+    slippage?: number,
+}) => {
     const quote = raydiumClient.liquidity.computePairAmount({
-        poolInfo: options.poolData.poolInfo,
-        amount: options.amountSol.toString(),
-        baseIn: options.poolData.baseIn,
+        poolInfo: options.poolInfo,
+        amount: new Decimal(options.uiAmountIn).mul(10 ** (options.baseIn ? options.poolInfo.mintA.decimals : options.poolInfo.mintB.decimals)).toFixed(0),
+        baseIn: options.baseIn,
         // ? default is 3%
         slippage: new Percent(options.slippage ? options.slippage * 100 : 3, 100),
     });
@@ -196,12 +200,7 @@ export const addRaydiumLiquidity = async (raydiumClient: Raydium, options: {
         // ? to cause "Transaction reverted in simulation. Slippage tolerance exceeded." error
         fixedSide: "a",
         txVersion: constants.txVersion,
-        // ? lamports seems to be (units * microLamports) / 1_000_000
-        // todo: function to get compute budget
-        computeBudgetConfig: {
-            units: 600_000,
-            microLamports: 4_591_500,
-        },
+        computeBudgetConfig: getComputeBudgetConfig(),
     });
 
     return { transaction };

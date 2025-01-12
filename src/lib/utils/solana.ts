@@ -29,3 +29,12 @@ export const getTokenAccountAmountByOwner = async (connection: Connection, owner
 
     return tokenAccount.account.data.parsed.info.tokenAmount as TokenAmount;
 };
+
+// ? lamports seems to be (units * microLamports) / 1_000_000
+// todo: make work
+export const getComputeBudgetConfig = () => {
+    return {
+        units: 600_000,
+        microLamports: 4_591_500,
+    };
+};

@@ -1,10 +1,8 @@
-<script>
-    let { children, close, isOpen = $bindable() } = $props();
+<script lang="ts">
+    let { children, isOpen = $bindable() } = $props();
 
     const closeModal = () => {
         isOpen = false;
-
-        close()
     };
 </script>
 

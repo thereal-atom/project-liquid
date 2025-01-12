@@ -8,6 +8,7 @@
 	import OpenPositionPanel from "$lib/features/position/open/OpenPositionPanel.svelte";
 	import { getWalletState } from "$lib/context/wallet.svelte";
 	import { getAccountBalance, getTokenAccountAmountByOwner } from "$lib/utils/solana";
+	import PoolInfoPanel from "$lib/features/pool/PoolInfoPanel.svelte";
 
     const app = getAppState();
     const wallet = getWalletState();
@@ -17,6 +18,10 @@
     let poolKeys: AmmV4Keys | AmmV5Keys | undefined = $state(undefined);
 
     let tokenBalances: Record<string, any> = $state({});
+
+    // todo: fix weird bug
+    // on very first page load (first time this pool is loaded? first time app comes online? not sure.) pool never loads
+    // works fine on page refresh
 
     const updateBalances = () => {
         if (!app.connection) return;
@@ -54,12 +59,12 @@
     
     const updatePoolInfo = () => {
         if (!app.raydiumClient) return;
+        // runs only when pool is loaded
         if (pool) return;
 
+        // ! rpc call (once)
         getRaydiumPoolInfo(app.raydiumClient, $page.url.searchParams.get("poolId") || "").then(poolInfo => {
             pool = poolInfo as ApiV3PoolInfoStandardItem;
-
-            // balances can only update when pool is loaded
             updateBalances();
         });
     };
@@ -68,12 +73,13 @@
         if (!app.raydiumClient || !pool) return;
 
         // ! rpc call (every 30 seconds)
-        // something like this would need to be in global cache (potentially server cache or just redis)
-        // cache can be in memory since ttl is so short and doesn't need to be persisted
-        // requires me to use the server to fetch this data rather than client
-        // obviously have had issues with getting the data from server to client so make sure that is sorted
         getRaydiumPoolInfoFromRpc(app.raydiumClient, pool.id).then((_pool) => {
             if (!pool) return;
+
+            // todo: caching
+            // not too bothered about this for now
+            // biggest issue is users spam refreshing in some way, so local cache should be fine
+            // no need for global cache I don't think - unlikely many people will be trying to access the same token at the same time so much that I need cache
 
             pool.mintAmountA = _pool.poolInfo.mintAmountA;
             pool.mintAmountB = _pool.poolInfo.mintAmountB;
@@ -102,11 +108,19 @@
 </script>
 
 {#if pool}
-    <OpenPositionPanel
-        {pool}
-        {poolRpcData}
-        {tokenBalances}
-    />
+    <div class="p-16">
+        <div class="flex flex-row justify-center mt-8">
+            <OpenPositionPanel
+                {pool}
+                {poolRpcData}
+                {poolKeys}
+                {tokenBalances}
+            />
+            <div class="ml-5">
+                <PoolInfoPanel {pool} />
+            </div>
+        </div>
+    </div>
 {:else}
     <p>Loading Pool.</p>
 {/if}

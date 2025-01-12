@@ -1,19 +1,43 @@
 <script lang="ts">
+	import { getToasterState } from "$lib/context/toaster.svelte";
 	import { getWalletState } from "$lib/context/wallet.svelte";
 	import { getPhantomProvider } from "$lib/utils/phantom";
 
 	let { children } = $props();
 
     const wallet = getWalletState();
+    const toaster = getToasterState();
+
+    let isLoading = $state(false);
 
     const handleConnectPhantomWallet = async () => {
         const phantomProvider = getPhantomProvider();
-        if (!phantomProvider) return;
+        if (!phantomProvider) {
+            toaster.add({
+                title: "Error Connecting Wallet",
+                message: "Phantom Wallet not found.",
+                type: "error",
+            });
+
+            return;
+        };
+
+        isLoading = true;
 
         try {
             await phantomProvider.connect();
-        } catch (err) {
+
+            isLoading = false;
+        } catch (err: any) {
             console.error(err);
+
+            toaster.add({
+                title: "Error Connecting Wallet",
+                message: err.message,
+                type: "error",
+            });
+
+            isLoading = false;
         };
     };
 
@@ -21,10 +45,22 @@
         const phantomProvider = getPhantomProvider();
         if (!phantomProvider) return;
 
+        isLoading = true;
+
         try {
             await phantomProvider.disconnect();
-        } catch (err) {
+
+            isLoading = false;
+        } catch (err: any) {
             console.error(err);
+
+            toaster.add({
+                title: "Error Disconnecting Wallet",
+                message: err.message,
+                type: "error",
+            });
+
+            isLoading = false;
         };
     };
 </script>
@@ -65,6 +101,7 @@
                 <button
                     class="ml-4 px-4 py-2 bg-indigo-500 font-semibold rounded-md"
                     onclick={handleDisconnectPhantomWallet}
+                    disabled={isLoading}
                 >
                     Disconnect
                 </button>
@@ -72,6 +109,7 @@
                 <button
                     class="px-4 py-2 bg-indigo-500 font-semibold rounded-md"
                     onclick={handleConnectPhantomWallet}
+                    disabled={isLoading}
                 >
                     Connect Phantom
                 </button>

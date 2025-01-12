@@ -24,6 +24,10 @@
     let phantomProvider: any = $state(undefined);
 
     onMount(async () => {
+        if (app.connection) {
+            app.initRaydiumClient({ connection: app.connection, });
+        };
+        
         if (window.phantom) {
             phantomProvider = getPhantomProvider();
 
