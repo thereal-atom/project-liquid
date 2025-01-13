@@ -1,14 +1,16 @@
 <script lang="ts">
-	import { WSOLMint, type AmmRpcData, type AmmV4Keys, type AmmV5Keys, type ApiV3PoolInfoStandardItem, type Raydium } from "@raydium-io/raydium-sdk-v2";
-	
 	import { page } from "$app/stores";
+
+    import { WSOLMint, type AmmRpcData, type AmmV4Keys, type AmmV5Keys, type ApiV3PoolInfoStandardItem } from "@raydium-io/raydium-sdk-v2";
+
+    import OpenPositionPanel from "$lib/features/position/open/components/OpenPositionPanel.svelte";
+	import PoolInfoPanel from "$lib/features/pool/PoolInfoPanel.svelte";
+
     import { getAppState } from "$lib/context/app.svelte";
+	import { getWalletState } from "$lib/context/wallet.svelte";	
 
     import { getRaydiumPoolInfo, getRaydiumPoolInfoFromRpc } from "$lib/utils/raydium";
-	import OpenPositionPanel from "$lib/features/position/open/OpenPositionPanel.svelte";
-	import { getWalletState } from "$lib/context/wallet.svelte";
 	import { getAccountBalance, getTokenAccountAmountByOwner } from "$lib/utils/solana";
-	import PoolInfoPanel from "$lib/features/pool/PoolInfoPanel.svelte";
 
     const app = getAppState();
     const wallet = getWalletState();
@@ -108,8 +110,8 @@
 </script>
 
 {#if pool}
-    <div class="p-16">
-        <div class="flex flex-row justify-center mt-8">
+    <div class="p-8">
+        <div class="flex flex-row justify-center">
             <OpenPositionPanel
                 {pool}
                 {poolRpcData}

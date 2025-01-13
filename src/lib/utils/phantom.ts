@@ -9,3 +9,12 @@ export const getPhantomProvider = () => {
   
     window.open("https://phantom.app/", "_blank");
 };
+
+export const connectPhantomWallet = async () => {
+    const phantomProvider = getPhantomProvider();
+    if (!phantomProvider) {
+        throw new Error("Phantom Wallet not found.");
+    };
+
+    await phantomProvider.connect();
+};

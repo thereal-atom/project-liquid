@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { ApiV3PoolInfoStandardItem, AmmRpcData, AmmV4Keys, AmmV5Keys } from "@raydium-io/raydium-sdk-v2";
-
+    import type { ApiV3PoolInfoStandardItem, AmmRpcData, AmmV4Keys, AmmV5Keys } from "@raydium-io/raydium-sdk-v2";
+    
 	import Modal from "$lib/components/Modal.svelte";
 	import SwapSection from "./ModalSwapSection.svelte";
     import AddLiquiditySection from "./ModalAddLiquiditySection.svelte";
     import OpenShortsSection from "./ModalOpenShortsSection.svelte";
-
+    
     type Props = {
         pool: ApiV3PoolInfoStandardItem;
         poolRpcData: AmmRpcData;
@@ -14,7 +14,7 @@
         uiAmountIn: number;
         isOpen: boolean;
     };
-    let { pool, poolRpcData, poolKeys, tokenBalances, uiAmountIn, isOpen }: Props = $props();
+    let { pool, poolRpcData, poolKeys, tokenBalances, uiAmountIn, isOpen = $bindable() }: Props = $props();
 
     let confirmPositionModalTabs = $state({
         activeTabIndex: 0,
@@ -24,14 +24,18 @@
             { label: "Step 3: Open Shorts" },
         ],
     });
+    
+    $effect(() => {
+        // makes it so this runs when the isOpen state changes
+        // best way to do this?
+        isOpen;
 
-    // todo: bug fix - if you open the modal and then close it, the modal will not open again
+        confirmPositionModalTabs.activeTabIndex = 0;
+    });
 </script>
 
-<Modal
-    bind:isOpen={isOpen}
->
-    <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col w-[600px] h-[600px] p-8 bg-[#0C0910] border border-secondary/20 rounded-md z-20">
+<Modal bind:isOpen>
+    <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col w-[600px] h-[700px] p-8 bg-[#0C0910] border border-secondary/20 rounded-md z-20">
         <p class="text-xl font-bold">Confirm Position</p>
         <div class="flex flex-row my-4 bg-primary/50 border border-secondary/10 rounded-md">
             {#each confirmPositionModalTabs.tabs as tab, i}
@@ -51,18 +55,22 @@
                     {poolKeys}
                     {tokenBalances}
                     {uiAmountIn}
+                    onSkipSwap={() => confirmPositionModalTabs.activeTabIndex = 1}
                 />
             {:else if confirmPositionModalTabs.activeTabIndex === 1}
                 <AddLiquiditySection
                     {pool}
                     {poolRpcData}
+                    {poolKeys}
                     {tokenBalances}
+                    uiAmountMintA={uiAmountIn}
+                    onSkipAddLiquidity={() => confirmPositionModalTabs.activeTabIndex = 2}
                 />
             {:else if confirmPositionModalTabs.activeTabIndex === 2}
                 <OpenShortsSection
                     {pool}
                     {poolRpcData}
-                    {tokenBalances}
+                    uiAmountMintA={uiAmountIn}
                 />
             {/if}
         </div>

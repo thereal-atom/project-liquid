@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { getToasterState } from "$lib/context/toaster.svelte";
 	import { getWalletState } from "$lib/context/wallet.svelte";
-	import { getPhantomProvider } from "$lib/utils/phantom";
+
+	import { connectPhantomWallet, getPhantomProvider } from "$lib/utils/phantom";
 
 	let { children } = $props();
 
@@ -11,21 +12,10 @@
     let isLoading = $state(false);
 
     const handleConnectPhantomWallet = async () => {
-        const phantomProvider = getPhantomProvider();
-        if (!phantomProvider) {
-            toaster.add({
-                title: "Error Connecting Wallet",
-                message: "Phantom Wallet not found.",
-                type: "error",
-            });
-
-            return;
-        };
-
         isLoading = true;
 
         try {
-            await phantomProvider.connect();
+            await connectPhantomWallet()
 
             isLoading = false;
         } catch (err: any) {

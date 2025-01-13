@@ -175,26 +175,30 @@ export const getRaydiumAddLiquidityQuote = (raydiumClient: Raydium, options: {
 export const addRaydiumLiquidity = async (raydiumClient: Raydium, options: {
     poolInfo: ApiV3PoolInfoStandardItem,
     poolKeys: AmmV5Keys | AmmV4Keys,
-    amountA: number,
-    amountB: number,
-    minAmountB: number,
+    uiAmountA: number,
+    uiAmountB: number,
+    uiMinAmountB: number,
     mintA: ApiV3Token,
     mintB: ApiV3Token,
 }) => {
+    console.log(`ui amount a: ${options.uiAmountA}`);
+    console.log(`ui amount b: ${options.uiAmountB}`);
+    console.log(`ui min amount b: ${options.uiMinAmountB}`);
+
     const { transaction } = await raydiumClient.liquidity.addLiquidity({
         poolInfo: options.poolInfo,
         poolKeys: options.poolKeys,
         amountInA: new TokenAmount(
             toToken(options.mintA),
-            new Decimal(options.amountA).mul(10 ** options.mintA.decimals).toFixed(0)
+            new Decimal(options.uiAmountA).mul(10 ** options.mintA.decimals).toFixed(0)
         ),
         amountInB: new TokenAmount(
             toToken(options.mintB),
-            new Decimal(options.amountB).mul(10 ** options.mintB.decimals).toFixed(0),
+            new Decimal(options.uiAmountB).mul(10 ** options.mintB.decimals).toFixed(0),
         ),
         otherAmountMin: new TokenAmount(
             toToken(options.mintB),
-            new Decimal(options.minAmountB).mul(10 ** options.mintB.decimals).toFixed(0),
+            new Decimal(options.uiMinAmountB).mul(10 ** options.mintB.decimals).toFixed(0),
         ),
         // ? setting to "b" (although it might just be the side that's the memecoin) seems
         // ? to cause "Transaction reverted in simulation. Slippage tolerance exceeded." error

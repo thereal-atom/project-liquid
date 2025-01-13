@@ -3,13 +3,16 @@
 	import "$lib/styles/global.css";
     
 	import { onMount } from "svelte";
-	import { PublicKey } from "@solana/web3.js";
-	import Toaster from "$lib/components/toasts/Toaster.svelte";
-	import { getPhantomProvider } from "$lib/utils/phantom";
-	import { getWallet } from "$lib/api/wallet";
+
+    import { PublicKey } from "@solana/web3.js";
+
+    import Toaster from "$lib/components/toasts/Toaster.svelte";
+
+    import { getAppState, setAppState } from "$lib/context/app.svelte";
 	import { getWalletState, setWalletState } from "$lib/context/wallet.svelte";
-	import { getAppState, setAppState } from "$lib/context/app.svelte";
 	import { getToasterState, setToasterState } from "$lib/context/toaster.svelte";
+
+    import { getPhantomProvider } from "$lib/utils/phantom";
 
     setWalletState();
     setAppState();
@@ -25,7 +28,7 @@
 
     onMount(async () => {
         if (app.connection) {
-            app.initRaydiumClient({ connection: app.connection, });
+            app.initRaydiumClient({ connection: app.connection });
         };
         
         if (window.phantom) {
@@ -38,9 +41,6 @@
                 };
 
                 wallet.pubKeyString = pubKeyString;
-
-                // const walletInfo = await getWallet(wallet.pubKey);
-                // wallet.balance = walletInfo.lamports / 10 ** 9;
 
                 toaster.add({
                     title: "Wallet Connected",

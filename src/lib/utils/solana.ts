@@ -1,5 +1,6 @@
 import { Connection, PublicKey, type TokenAmount } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
+import { WSOLMint, type ApiV3PoolInfoStandardItem, type ApiV3Token } from "@raydium-io/raydium-sdk-v2";
 
 export const initRpcConnection = (apiKey: string) => {
     const connection = new Connection(`https://mainnet.helius-rpc.com/?api-key=${apiKey}`, {
@@ -37,4 +38,16 @@ export const getComputeBudgetConfig = () => {
         units: 600_000,
         microLamports: 4_591_500,
     };
+};
+
+export const wSolToSolString = (name?: string) => {
+    return name ? name.replace(/WSOL/gi, "SOL") : "";
+};
+
+export const getMintSymbol = (mint: ApiV3Token, transformSol = true) => {
+    return transformSol ? wSolToSolString(mint.symbol) : mint.symbol;
+};
+
+export const getPoolSolMint = (pool: ApiV3PoolInfoStandardItem) => {
+    return pool.mintA.address === WSOLMint.toBase58() ? pool.mintA : pool.mintB;
 };

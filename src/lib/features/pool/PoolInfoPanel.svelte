@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { copy } from "$lib/actions/copy.svelte";
 	import { truncateString } from "$lib/utils/common";
+	import { getMintSymbol } from "$lib/utils/solana";
 	import type { ApiV3PoolInfoStandardItem } from "@raydium-io/raydium-sdk-v2";
 
     type Props = {
@@ -13,7 +14,7 @@
     <div class="flex flex-col w-[400px] p-4 bg-primary border border-secondary/20 rounded-md">
         <p class="font-bold">LP Pool</p>
         <div class="flex flex-row items-center justify-between mt-2">
-            <p class="text-xs font-medium">{pool.mintA.symbol}</p>
+            <p class="text-xs font-medium">{getMintSymbol(pool.mintA)}</p>
             <div class="flex flex-row items-center">
                 <p class="text-[10px] font-medium opacity-50">{truncateString(pool.mintA.address, 8, 8)}</p>
                 <button use:copy={{ text: pool.mintA.address }}>
@@ -37,7 +38,7 @@
             </div>
         </div>
         <div class="flex flex-row items-center justify-between mt-1.5">
-            <p class="text-xs font-medium">{pool.mintB.symbol}</p>
+            <p class="text-xs font-medium">{getMintSymbol(pool.mintB)}</p>
             <div class="flex flex-row items-center">
                 <p class="text-[10px] font-medium opacity-50">{truncateString(pool.mintB.address, 8, 8)}</p>
                 <button use:copy={{ text: pool.mintB.address }}>
@@ -115,12 +116,12 @@
         </div>
         <div class="flex flex-row items-center justify-between mt-4">
             <div class="flex flex-row items-center">
-                <p class="text-xs font-medium">Pooled {pool.mintA.symbol}</p>
+                <p class="text-xs font-medium">Pooled {getMintSymbol(pool.mintA)}</p>
                 <div class="w-4 h-4 ml-1 p-0.5 bg-white/20 rounded-full">
                     <img
                         class="w-3 min-w-3 h-3 rounded-full"
                         src={pool.mintA.logoURI}
-                        alt={pool.mintA.symbol}
+                        alt={getMintSymbol(pool.mintA)}
                     />
                 </div>
             </div>
@@ -128,12 +129,12 @@
         </div>
         <div class="flex flex-row items-center justify-between mt-1.5">
             <div class="flex flex-row items-center">
-                <p class="text-xs font-medium">Pooled {pool.mintB.symbol}</p>
+                <p class="text-xs font-medium">Pooled {getMintSymbol(pool.mintB)}</p>
                 <div class="w-4 h-4 ml-1 p-0.5 bg-white/20 rounded-full">
                     <img
                         class="w-3 min-w-3 h-3 rounded-full"
                         src={pool.mintB.logoURI}
-                        alt={pool.mintB.symbol}
+                        alt={getMintSymbol(pool.mintB)}
                     />
                 </div>
             </div>
