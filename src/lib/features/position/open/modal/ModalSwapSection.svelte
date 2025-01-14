@@ -96,8 +96,6 @@
         
         const provider = getPhantomProvider();
 
-        console.log(poolKeys);
-
         if (!app.raydiumClient || !app.connection || !poolKeys || !provider) return;
 
         isLoading = true;

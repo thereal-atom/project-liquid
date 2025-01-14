@@ -2,6 +2,7 @@ import { LocalStorage } from "$lib/utils/localStorage.svelte";
 import { getContext, setContext } from "svelte";
 
 const TOKEN_BALANCES_KEY = "_pl_token-balances";
+const OX_SETTINGS_KEY = "_pl_ox-settings";
 // const TOKEN_ACCOUNT_EXPIRY_TIME = 30_000;
 
 const defaultWalletState = {
@@ -13,11 +14,17 @@ interface TokenAccount {
     lastUpdatedTimestamp: number;
 };
 
+interface OxSettings {
+    apiKey?: string;
+};
+
 class WalletState {
     pubKeyString: string | null = $state(null);
     tokenBalances: Record<string, TokenAccount> = $state({});
+    oxSettings: OxSettings | undefined = $state(undefined);
 
     private _tokenBalances = new LocalStorage<Record<string, TokenAccount>>(TOKEN_BALANCES_KEY, {});
+    private _oxSettings = new LocalStorage<OxSettings>(OX_SETTINGS_KEY, {});
 
     constructor() {
         this.tokenBalances = this._tokenBalances.current;
@@ -26,6 +33,7 @@ class WalletState {
     reset () {
         this.pubKeyString = defaultWalletState.pubKeyString;
         this.tokenBalances = this._tokenBalances.current;
+        this.oxSettings = {};
     };
     
     getTokenBalance(mint: string): number {
@@ -56,6 +64,18 @@ class WalletState {
         this.tokenBalances = this._tokenBalances.current;
 
         return newAccount.balance;
+    };
+
+    getOxSettings(): OxSettings {
+        this.oxSettings = this._oxSettings.current;
+        return this.oxSettings;
+    };
+
+    setOxSettings(settings: OxSettings): OxSettings {
+        this.oxSettings = settings;
+        this._oxSettings.current = settings;
+        // encrypt api key.
+        return this.oxSettings;
     };
 };
 

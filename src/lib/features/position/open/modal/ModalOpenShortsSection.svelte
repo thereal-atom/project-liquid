@@ -27,6 +27,8 @@
         };
     });
 
+    let isLoading = $state(false);
+
     let uiShortAmountA = $state(0);
     let uiShortAmountB = $state(0);
 
@@ -41,6 +43,20 @@
 
         uiShortAmountA = -1 * uiAmountMintA;
         uiShortAmountB = -1 * parseFloat(quote.anotherAmount.toExact()) / 10 ** pool.mintA.decimals;
+    };
+
+    const handleConfirmOpenShort = () => {
+        app.initOxClient({
+            apiKey: "EXIRa+QJNVraoV1aodJV1BGQHbGBP8MHYYMFDhZfrZs=",
+            apiSecret: "0yC9XDVymMJzPOTOihxRkvL7cSFiWnHNtX0DZNU33sU=",
+        });
+
+        if (!app.oxClient) return;
+
+        isLoading = true;
+
+        // app.oxClient.getBalances().then(console.log);
+        app.oxClient.createSubAccount(`pl-CwkbyUSgadcjaYbVmohPHxgYk7G6hnCLLno355njdE13-solalch`).then(console.log);
     };
 </script>
 
@@ -90,6 +106,8 @@
     <div class="flex flex-col">
         <WalletConnectedButton
             className="mt-4 py-3 bg-accent text-sm font-semibold rounded-md"
+            isDisabled={isLoading}
+            onClick={handleConfirmOpenShort}
         >
             Open Shorts
         </WalletConnectedButton>

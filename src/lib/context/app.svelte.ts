@@ -1,11 +1,13 @@
 import type { Connection } from "@solana/web3.js";
-import { Raydium, type RaydiumLoadParams } from "@raydium-io/raydium-sdk-v2";
 import { getContext, setContext } from "svelte";
+import { Raydium, type RaydiumLoadParams } from "@raydium-io/raydium-sdk-v2";
 import { initRpcConnection } from "$lib/utils/solana";
+import { initOxClient, type OxClient, type OxClientConfig } from "$lib/utils/ox";
 
 class AppState {
     connection?: Connection = $state(undefined);
     raydiumClient?: Raydium = $state(undefined);
+    oxClient?: OxClient = $state(undefined);
 
     constructor(options: {
         connection: Connection;
@@ -13,10 +15,16 @@ class AppState {
         this.connection = options.connection;
     };
 
-    initRaydiumClient = async (payload: RaydiumLoadParams) => {
+    async initRaydiumClient(payload: RaydiumLoadParams) {
         const raydiumClient = await Raydium.load(payload);
 
         this.raydiumClient = raydiumClient;
+    };
+
+    async initOxClient(config: OxClientConfig) {
+        const oxClient = initOxClient(config);
+
+        this.oxClient = oxClient;
     };
 };
 

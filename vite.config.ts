@@ -9,6 +9,23 @@ export default defineConfig({
             globals: {
                 Buffer: true,
             },
+            include: [ "crypto" ],
         }),
     ],
+    resolve: {
+        alias: {
+            crypto: "crypto-browserify",
+            stream: "stream-browserify",
+        },
+    },
+    build: {
+        rollupOptions: {
+            plugins: [
+                nodePolyfills({ include: [ "http", "buffer", "crypto" ] }),
+            ],
+        },
+        commonjsOptions: {
+            transformMixedEsModules: true,
+        },
+    },
 });

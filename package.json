@@ -40,6 +40,7 @@
 		"@vercel/analytics": "^1.4.1",
 		"bn.js": "^5.2.1",
 		"bs58": "^6.0.0",
+		"crypto-browserify": "^3.12.1",
 		"decimal.js": "^10.4.3",
 		"elysia": "^1.1.26",
 		"vite-plugin-node-polyfills": "^0.22.0",
