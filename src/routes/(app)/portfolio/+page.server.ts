@@ -1,5 +1,3 @@
-import { CMC_API_KEY } from "$env/static/private";
-
 export const load = (async () => {
     const positions = [
         {
